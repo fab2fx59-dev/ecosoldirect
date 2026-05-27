@@ -320,7 +320,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/realisation_mobile.png"
+          src="/mobile-realisations.png"
           alt="Réalisations mobile"
           style={{
             width: '100%',
