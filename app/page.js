@@ -51,16 +51,24 @@ export default function Home() {
           zIndex: 1000,
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
           <img
             src="/logo.png"
             alt="ECOSOL Direct"
-            style={{ height: '80px' }}
+            style={{ height: '85px' }}
           />
         </div>
 
-        <nav style={{ display: 'flex', gap: '25px' }}>
+        <nav
+          style={{
+            display: 'flex',
+            gap: '25px',
+            fontSize: '18px',
+          }}
+        >
           <a href="#services">Services</a>
+          <a href="#avantages">Avantages</a>
+          <a href="#realisations">Réalisations</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -70,7 +78,7 @@ export default function Home() {
       <section
         style={{
           position: 'relative',
-          height: '700px',
+          height: '750px',
           backgroundImage:
             "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop')",
           backgroundSize: 'cover',
@@ -79,6 +87,7 @@ export default function Home() {
           alignItems: 'center',
           padding: '0 80px',
           color: '#fff',
+          marginBottom: '120px',
         }}
       >
         <div
@@ -134,6 +143,7 @@ export default function Home() {
         style={{
           padding: '100px 60px',
           background: '#f7f7f7',
+          marginBottom: '120px',
         }}
       >
         <h2
@@ -180,11 +190,101 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AVANTAGES */}
+      <section
+        id="avantages"
+        style={{
+          padding: '0 60px',
+          marginBottom: '120px',
+        }}
+      >
+        <h2
+          style={{
+            fontSize: '42px',
+            marginBottom: '40px',
+          }}
+        >
+          Pourquoi opter pour l’énergie solaire ?
+        </h2>
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '25px',
+          }}
+        >
+          <img
+            src="/avantage1.png"
+            alt=""
+            style={{
+              width: '100%',
+              borderRadius: '20px',
+            }}
+          />
+
+          <img
+            src="/avantage2.png"
+            alt=""
+            style={{
+              width: '100%',
+              borderRadius: '20px',
+            }}
+          />
+        </div>
+      </section>
+
+      {/* REALISATIONS */}
+      <section
+        id="realisations"
+        style={{
+          padding: '0 60px',
+          marginBottom: '120px',
+        }}
+      >
+        <h2
+          style={{
+            fontSize: '42px',
+            marginBottom: '40px',
+          }}
+        >
+          Découvrez nos réalisations
+        </h2>
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '25px',
+          }}
+        >
+          <img
+            src="/realisation1.png"
+            alt=""
+            style={{
+              width: '100%',
+              borderRadius: '20px',
+            }}
+          />
+
+          <img
+            src="/realisation2.png"
+            alt=""
+            style={{
+              width: '100%',
+              borderRadius: '20px',
+            }}
+          />
+        </div>
+      </section>
+
       {/* ABOUT */}
       <section
         id="about"
         style={{
           padding: '100px 60px',
+          background: '#f7f7f7',
+          marginBottom: '120px',
         }}
       >
         <div
@@ -339,7 +439,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         style={{
-          padding: '40px',
+          padding: '50px',
           textAlign: 'center',
           background: '#000',
           color: '#fff',
