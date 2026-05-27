@@ -198,40 +198,14 @@ export default function Home() {
           marginBottom: '120px',
         }}
       >
-        <h2
+        <img
+          src="/avantages.png"
+          alt="Pourquoi opter pour l'énergie solaire"
           style={{
-            fontSize: '42px',
-            marginBottom: '40px',
+            width: '100%',
+            borderRadius: '20px',
           }}
-        >
-          Pourquoi opter pour l’énergie solaire ?
-        </h2>
-
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '25px',
-          }}
-        >
-          <img
-            src="/avantage1.png"
-            alt=""
-            style={{
-              width: '100%',
-              borderRadius: '20px',
-            }}
-          />
-
-          <img
-            src="/avantage2.png"
-            alt=""
-            style={{
-              width: '100%',
-              borderRadius: '20px',
-            }}
-          />
-        </div>
+        />
       </section>
 
       {/* REALISATIONS */}
@@ -242,40 +216,14 @@ export default function Home() {
           marginBottom: '120px',
         }}
       >
-        <h2
+        <img
+          src="/realisations.png"
+          alt="Découvrez nos réalisations"
           style={{
-            fontSize: '42px',
-            marginBottom: '40px',
+            width: '100%',
+            borderRadius: '20px',
           }}
-        >
-          Découvrez nos réalisations
-        </h2>
-
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '25px',
-          }}
-        >
-          <img
-            src="/realisation1.png"
-            alt=""
-            style={{
-              width: '100%',
-              borderRadius: '20px',
-            }}
-          />
-
-          <img
-            src="/realisation2.png"
-            alt=""
-            style={{
-              width: '100%',
-              borderRadius: '20px',
-            }}
-          />
-        </div>
+        />
       </section>
 
       {/* ABOUT */}
