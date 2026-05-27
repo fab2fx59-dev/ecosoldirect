@@ -1,127 +1,330 @@
 export default function Home() {
-  const img = {
-    hero: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop",
-    field: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1600&auto=format&fit=crop",
-    panels: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1600&auto=format&fit=crop",
-  };
-
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", color: "#10233f", background: "#fff" }}>
-      <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "24px 7%", borderBottom: "1px solid #e8eef4" }}>
-        <div style={{ fontSize: 34, fontWeight: 800, letterSpacing: 1 }}>
-          <span style={{ color: "#12234a" }}>ECO</span><span style={{ color: "#0aa0c8" }}>SOL</span>
-          <div style={{ fontSize: 18, letterSpacing: 10, color: "#0aa0c8" }}>DIRECT</div>
-        </div>
-        <nav style={{ display: "flex", gap: 28 }}>
-          <a href="#solutions">Passer au solaire</a>
-          <a href="#about">À propos</a>
-          <a href="#contact">Contact</a>
+    <main
+      style={{
+        fontFamily: "Arial, sans-serif",
+        backgroundColor: "#fff",
+        color: "#10233f",
+      }}
+    >
+      {/* HEADER */}
+      <header
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "25px 7%",
+          borderBottom: "1px solid #eaeaea",
+          background: "#fff",
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+        }}
+      >
+        <img
+          src="/logo.png"
+          alt="ECOSOL DIRECT"
+          style={{ height: "80px" }}
+        />
+
+        <nav style={{ display: "flex", gap: "30px" }}>
+          <a href="#services" style={linkStyle}>
+            Services
+          </a>
+          <a href="#about" style={linkStyle}>
+            À propos
+          </a>
+          <a href="#contact" style={linkStyle}>
+            Contact
+          </a>
         </nav>
       </header>
 
-      <section style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", alignItems: "center", minHeight: 650 }}>
-        <div style={{ padding: "70px 7%" }}>
-          <p style={{ color: "#0aa0c8", fontWeight: 700 }}>Meilleur pour l'environnement</p>
-          <h1 style={{ fontSize: 62, lineHeight: 1.05, margin: "20px 0" }}>
-            Adoptez l'énergie solaire dès aujourd'hui
-          </h1>
-          <p style={{ fontSize: 20, lineHeight: 1.7, color: "#4d5b6b" }}>
-            Installez des panneaux solaires au sol pour produire et consommer votre propre énergie.
-            Contribuez à un avenir durable tout en réduisant considérablement vos factures d'électricité.
+      {/* HERO */}
+      <section
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          alignItems: "center",
+          minHeight: "85vh",
+          padding: "80px 7%",
+          gap: "60px",
+          background:
+            "linear-gradient(to right,#ffffff 30%,#edf9ff 100%)",
+        }}
+      >
+        <div>
+          <p
+            style={{
+              color: "#00a0d6",
+              fontWeight: "bold",
+              fontSize: "18px",
+            }}
+          >
+            ÉNERGIE RENOUVELABLE
           </p>
-          <a href="#solutions" style={{ display: "inline-block", marginTop: 35, background: "#0aa0c8", color: "#fff", padding: "17px 30px", borderRadius: 8, textDecoration: "none", fontWeight: 700 }}>
-            Découvrez nos solutions
+
+          <h1
+            style={{
+              fontSize: "68px",
+              lineHeight: "1.05",
+              margin: "20px 0",
+            }}
+          >
+            Adoptez
+            <br />
+            l’énergie solaire
+          </h1>
+
+          <p
+            style={{
+              fontSize: "22px",
+              lineHeight: "1.7",
+              color: "#5b6675",
+              marginBottom: "35px",
+            }}
+          >
+            Installation de panneaux photovoltaïques au sol,
+            autoconsommation, batteries et solutions énergétiques
+            intelligentes pour particuliers et professionnels.
+          </p>
+
+          <a
+            href="#contact"
+            style={{
+              background: "#00a0d6",
+              color: "#fff",
+              padding: "18px 34px",
+              borderRadius: "12px",
+              textDecoration: "none",
+              fontWeight: "bold",
+              display: "inline-block",
+            }}
+          >
+            Demander un devis
           </a>
         </div>
-        <img src={img.hero} alt="Panneaux solaires" style={{ width: "100%", height: 650, objectFit: "cover" }} />
+
+        <img
+          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400"
+          alt="Panneaux solaires"
+          style={{
+            width: "100%",
+            borderRadius: "24px",
+            boxShadow: "0 25px 60px rgba(0,0,0,0.15)",
+          }}
+        />
       </section>
 
-      <section id="solutions" style={{ padding: "90px 7%" }}>
-        <h2 style={{ fontSize: 44 }}>Pourquoi opter pour l'énergie solaire ?</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center", marginTop: 50 }}>
-          <img src={img.field} alt="Installation solaire" style={{ width: "100%", borderRadius: 20 }} />
-          <div>
-            <h3 style={{ fontSize: 34 }}>Une énergie propre et renouvelable</h3>
-            <p style={{ fontSize: 19, lineHeight: 1.8, color: "#4d5b6b" }}>
-              Investir dans l'énergie solaire, c'est faire un choix intelligent pour votre portefeuille
-              et pour l'environnement. L'énergie solaire est une ressource inépuisable, et son utilisation
-              vous permet de contribuer à la protection de notre planète.
-            </p>
-            <a href="#about" style={{ display: "inline-block", marginTop: 25, color: "#0aa0c8", fontWeight: 700 }}>
-              En savoir plus
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* SERVICES */}
+      <section
+        id="services"
+        style={{
+          padding: "100px 7%",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "50px",
+            textAlign: "center",
+            marginBottom: "70px",
+          }}
+        >
+          Nos services
+        </h2>
 
-      <section id="about" style={{ background: "#f3f9fc", padding: "90px 7%" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60 }}>
-          <div>
-            <h2 style={{ fontSize: 42 }}>Pourquoi une installation au sol ?</h2>
-            <p style={{ fontSize: 18, lineHeight: 1.8 }}>
-              Nous rendons la transition vers l'énergie solaire simple et accessible, garantissant qualité et satisfaction.
-            </p>
-            <ul style={{ fontSize: 18, lineHeight: 2 }}>
-              <li><strong>Entretien facilité :</strong> nettoyage et accès à hauteur d'homme.</li>
-              <li><strong>Rendement optimisé :</strong> orientation et inclinaison parfaites.</li>
-              <li><strong>Préservation de votre toiture :</strong> aucun risque de fuite.</li>
-            </ul>
-          </div>
-          <img src={img.panels} alt="Panneaux photovoltaïques" style={{ width: "100%", borderRadius: 20 }} />
-        </div>
-      </section>
-
-      <section style={{ padding: "80px 7%", textAlign: "center" }}>
-        <h2 style={{ fontSize: 42 }}>Comment fonctionne l'énergie solaire</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 30, marginTop: 50 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+            gap: "30px",
+          }}
+        >
           {[
-            ["300 000", "Clients satisfaits"],
-            ["5 milliards", "KwH d'énergie propre générée"],
-            ["4 millions", "Tonnes de CO2 évitées chaque année"],
-          ].map(([n, t]) => (
-            <div key={n} style={{ padding: 35, border: "1px solid #dcecf3", borderRadius: 18 }}>
-              <div style={{ fontSize: 42, color: "#0aa0c8", fontWeight: 800 }}>{n}</div>
-              <p>{t}</p>
+            "Installation solaire",
+            "Batteries de stockage",
+            "Autoconsommation",
+            "Maintenance & SAV",
+          ].map((service) => (
+            <div
+              key={service}
+              style={{
+                background: "#f8fbfd",
+                padding: "40px",
+                borderRadius: "20px",
+                border: "1px solid #e6f2f7",
+              }}
+            >
+              <h3 style={{ fontSize: "28px" }}>{service}</h3>
+
+              <p
+                style={{
+                  color: "#5b6675",
+                  lineHeight: "1.8",
+                }}
+              >
+                Solutions professionnelles performantes et durables adaptées à
+                vos besoins énergétiques.
+              </p>
             </div>
           ))}
         </div>
       </section>
 
-      <section style={{ padding: "90px 7%", background: "#f8fbfd" }}>
-        <h2 style={{ fontSize: 42 }}>Découvrez nos réalisations</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24, marginTop: 40 }}>
-          {[img.hero, img.field, img.panels].map((src, i) => (
-            <img key={i} src={src} alt="Réalisation solaire" style={{ width: "100%", height: 260, objectFit: "cover", borderRadius: 18 }} />
-          ))}
+      {/* ABOUT */}
+      <section
+        id="about"
+        style={{
+          background: "#f4fbff",
+          padding: "100px 7%",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1000px",
+            margin: "auto",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "50px",
+              marginBottom: "30px",
+            }}
+          >
+            Pourquoi choisir ECOSOL DIRECT ?
+          </h2>
+
+          <p
+            style={{
+              fontSize: "22px",
+              lineHeight: "1.9",
+              color: "#5b6675",
+            }}
+          >
+            Nous accompagnons les particuliers et entreprises dans leur
+            transition énergétique grâce à des solutions fiables,
+            modernes et rentables.
+          </p>
         </div>
       </section>
 
-      <section style={{ padding: "90px 7%", textAlign: "center" }}>
-        <h2 style={{ fontSize: 42 }}>Témoignages de nos clients satisfaits !</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 25, marginTop: 45 }}>
-          {[
-            "Excellent service, je recommande vivement !",
-            "Une équipe professionnelle et réactive. Très satisfait de l'installation.",
-            "Un investissement rentable et une équipe de confiance. Merci à Ecosol Direct !",
-          ].map((t) => (
-            <blockquote key={t} style={{ padding: 30, background: "#f3f9fc", borderRadius: 18, fontSize: 18 }}>
-              « {t} »
-            </blockquote>
-          ))}
+      {/* CONTACT */}
+      <section
+        id="contact"
+        style={{
+          padding: "100px 7%",
+          background: "#10233f",
+          color: "#fff",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "700px",
+            margin: "auto",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "50px",
+              marginBottom: "25px",
+              textAlign: "center",
+            }}
+          >
+            Contactez-nous
+          </h2>
+
+          <p
+            style={{
+              textAlign: "center",
+              marginBottom: "50px",
+              color: "#d7e1ea",
+              fontSize: "20px",
+            }}
+          >
+            Obtenez votre étude solaire gratuite
+          </p>
+
+          <form
+            action="mailto:ecosoldirect.solaire@gmail.com"
+            method="POST"
+            encType="text/plain"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
+            <input
+              type="text"
+              placeholder="Nom"
+              required
+              style={inputStyle}
+            />
+
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              style={inputStyle}
+            />
+
+            <input
+              type="tel"
+              placeholder="Téléphone"
+              style={inputStyle}
+            />
+
+            <textarea
+              placeholder="Votre message"
+              rows="6"
+              required
+              style={inputStyle}
+            ></textarea>
+
+            <button
+              type="submit"
+              style={{
+                background: "#00a0d6",
+                color: "#fff",
+                border: "none",
+                padding: "18px",
+                borderRadius: "12px",
+                fontSize: "18px",
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              Envoyer
+            </button>
+          </form>
         </div>
       </section>
 
-      <section id="contact" style={{ padding: "90px 7%", background: "#10233f", color: "#fff" }}>
-        <h2 style={{ fontSize: 42 }}>Contact</h2>
-        <p>Notre équipe est là pour répondre à toutes vos questions.</p>
-        <p style={{ fontSize: 22, marginTop: 25 }}>ecosoldirecct.solaire@gmail.com</p>
-        <p>29 rue Tronchet<br />75008 Paris</p>
-      </section>
-
-      <footer style={{ padding: 30, textAlign: "center", color: "#6a7480" }}>
-        © 2026 ECOSOL DIRECT — Politique de cookies — Mentions légales — Politique de confidentialité
+      {/* FOOTER */}
+      <footer
+        style={{
+          padding: "30px",
+          textAlign: "center",
+          background: "#0b1b31",
+          color: "#cfd7df",
+        }}
+      >
+        © 2026 ECOSOL DIRECT — Tous droits réservés
       </footer>
     </main>
   );
 }
 
+const linkStyle = {
+  textDecoration: "none",
+  color: "#10233f",
+  fontWeight: "600",
+};
+
+const inputStyle = {
+  padding: "18px",
+  borderRadius: "12px",
+  border: "none",
+  fontSize: "16px",
+};
