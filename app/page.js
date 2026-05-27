@@ -96,13 +96,13 @@ export default function Home() {
           </h3>
 
           <p className="text-slate-600 mt-8 text-lg leading-relaxed max-w-xl">
-            ecosoldirecct.solaire@gmail.com
+            ecosoldirect.solaire@gmail.com
           </p>
         </div>
       </section>
 
       <footer className="py-10 text-center text-slate-500 text-sm border-t border-slate-200">
-        © 2026 ECOSOLL Direct — Tous droits réservés.
+        © 2026 ECOSOL Direct — Tous droits réservés.
       </footer>
     </main>
   )
