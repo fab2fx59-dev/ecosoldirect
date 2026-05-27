@@ -145,14 +145,13 @@ export default function Home() {
           display: 'none',
           position: 'relative',
           height: '650px',
-          backgroundImage:
-            "url('/hero-mobile.png')",
+          backgroundImage: "url('/hero-mobile.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          alignItems: 'center',
           padding: '0 20px',
           color: '#fff',
           marginBottom: '80px',
+          alignItems: 'center',
         }}
       >
         <div
@@ -234,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IMAGE AJOUTEE */}
+      {/* IMAGE SOUS SERVICES */}
       <section
         style={{
           width: '100%',
@@ -243,7 +242,7 @@ export default function Home() {
       >
         <img
           src="/installation-sol.png"
-          alt="Installation solaire au sol"
+          alt="Installation solaire"
           style={{
             width: '100%',
             height: 'auto',
@@ -263,7 +262,7 @@ export default function Home() {
       >
         <img
           src="/avantages.png"
-          alt=""
+          alt="Avantages solaire"
           style={{
             width: '100%',
             borderRadius: '20px',
@@ -282,7 +281,7 @@ export default function Home() {
       >
         <img
           src="/avantage-mobile.png"
-          alt=""
+          alt="Avantages solaire mobile"
           style={{
             width: '100%',
             borderRadius: '20px',
@@ -301,7 +300,7 @@ export default function Home() {
       >
         <img
           src="/realisations.png"
-          alt=""
+          alt="Réalisations"
           style={{
             width: '100%',
             borderRadius: '20px',
@@ -320,7 +319,7 @@ export default function Home() {
       >
         <img
           src="/realisation_mobile.png"
-          alt=""
+          alt="Réalisations mobile"
           style={{
             width: '100%',
             borderRadius: '20px',
@@ -400,52 +399,12 @@ export default function Home() {
               gap: '20px',
             }}
           >
-            <input
-              type="text"
-              name="nom"
-              placeholder="Nom"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="text"
-              name="prenom"
-              placeholder="Prénom"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="text"
-              name="adresse"
-              placeholder="Adresse"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Adresse email"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="tel"
-              name="telephone"
-              placeholder="Numéro de téléphone"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="date"
-              name="date"
-              required
-              style={inputStyle}
-            />
+            <input type="text" name="nom" placeholder="Nom" required style={inputStyle} />
+            <input type="text" name="prenom" placeholder="Prénom" required style={inputStyle} />
+            <input type="text" name="adresse" placeholder="Adresse" required style={inputStyle} />
+            <input type="email" name="email" placeholder="Adresse email" required style={inputStyle} />
+            <input type="tel" name="telephone" placeholder="Numéro de téléphone" required style={inputStyle} />
+            <input type="date" name="date" required style={inputStyle} />
 
             <button
               type="submit"
