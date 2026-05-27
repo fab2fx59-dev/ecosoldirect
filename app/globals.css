@@ -11,6 +11,18 @@ img {
   max-width: 100%;
 }
 
+/* DESKTOP / MOBILE IMAGES */
+
+.mobile-image {
+  display: none !important;
+}
+
+.desktop-image {
+  display: block !important;
+}
+
+/* RESPONSIVE MOBILE */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column !important;
@@ -49,5 +61,15 @@ img {
   input,
   button {
     width: 100% !important;
+  }
+
+  /* CACHE DESKTOP */
+  .desktop-image {
+    display: none !important;
+  }
+
+  /* AFFICHE MOBILE */
+  .mobile-image {
+    display: block !important;
   }
 }
