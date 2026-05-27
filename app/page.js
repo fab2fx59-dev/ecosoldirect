@@ -148,10 +148,8 @@ export default function Home() {
           backgroundImage: "url('/hero-mobile.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          padding: '0 20px',
           color: '#fff',
           marginBottom: '80px',
-          alignItems: 'center',
         }}
       >
         <div
@@ -159,6 +157,10 @@ export default function Home() {
             background: 'rgba(0,0,0,0.55)',
             padding: '30px',
             borderRadius: '20px',
+            position: 'absolute',
+            bottom: '40px',
+            left: '20px',
+            right: '20px',
           }}
         >
           <h2
