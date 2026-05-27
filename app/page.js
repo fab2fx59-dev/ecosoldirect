@@ -1,10 +1,38 @@
+'use client'
+
+import emailjs from '@emailjs/browser'
+import { useState } from 'react'
+
 export default function Home() {
+  const [status, setStatus] = useState('')
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    setStatus('Envoi en cours...')
+
+    emailjs
+      .sendForm(
+        'service_omff8d4',
+        'template_5z169cq',
+        e.target,
+        'WYga_xEvWDRSsyJk1'
+      )
+      .then(() => {
+        setStatus('Votre demande a bien été envoyée.')
+        e.target.reset()
+      })
+      .catch(() => {
+        setStatus("Erreur lors de l'envoi.")
+      })
+  }
+
   return (
     <main
       style={{
-        fontFamily: "Arial, sans-serif",
-        backgroundColor: "#ffffff",
-        color: "#111",
+        fontFamily: 'Arial, sans-serif',
+        backgroundColor: '#ffffff',
+        color: '#111',
         margin: 0,
         padding: 0,
       }}
@@ -12,26 +40,26 @@ export default function Home() {
       {/* HEADER */}
       <header
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "20px 60px",
-          borderBottom: "1px solid #eee",
-          position: "sticky",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '20px 60px',
+          borderBottom: '1px solid #eee',
+          position: 'sticky',
           top: 0,
-          background: "#fff",
+          background: '#fff',
           zIndex: 1000,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <img
             src="/logo.png"
             alt="ECOSOL Direct"
-            style={{ height: "80px" }}
+            style={{ height: '80px' }}
           />
         </div>
 
-        <nav style={{ display: "flex", gap: "25px" }}>
+        <nav style={{ display: 'flex', gap: '25px' }}>
           <a href="#services">Services</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
@@ -41,30 +69,30 @@ export default function Home() {
       {/* HERO */}
       <section
         style={{
-          position: "relative",
-          height: "700px",
+          position: 'relative',
+          height: '700px',
           backgroundImage:
             "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          alignItems: "center",
-          padding: "0 80px",
-          color: "#fff",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          display: 'flex',
+          alignItems: 'center',
+          padding: '0 80px',
+          color: '#fff',
         }}
       >
         <div
           style={{
-            background: "rgba(0,0,0,0.55)",
-            padding: "50px",
-            maxWidth: "700px",
-            borderRadius: "20px",
+            background: 'rgba(0,0,0,0.55)',
+            padding: '50px',
+            maxWidth: '700px',
+            borderRadius: '20px',
           }}
         >
           <h2
             style={{
-              fontSize: "60px",
-              marginBottom: "20px",
+              fontSize: '60px',
+              marginBottom: '20px',
             }}
           >
             L’énergie solaire pour votre avenir
@@ -72,8 +100,8 @@ export default function Home() {
 
           <p
             style={{
-              fontSize: "22px",
-              lineHeight: "1.6",
+              fontSize: '22px',
+              lineHeight: '1.6',
             }}
           >
             ECOSOL Direct accompagne particuliers et professionnels
@@ -84,15 +112,15 @@ export default function Home() {
           <a
             href="#contact"
             style={{
-              display: "inline-block",
-              marginTop: "30px",
-              padding: "18px 35px",
-              background: "#00a8e8",
-              color: "#fff",
-              textDecoration: "none",
-              borderRadius: "10px",
-              fontWeight: "bold",
-              fontSize: "18px",
+              display: 'inline-block',
+              marginTop: '30px',
+              padding: '18px 35px',
+              background: '#00a8e8',
+              color: '#fff',
+              textDecoration: 'none',
+              borderRadius: '10px',
+              fontWeight: 'bold',
+              fontSize: '18px',
             }}
           >
             Demander un devis
@@ -104,15 +132,15 @@ export default function Home() {
       <section
         id="services"
         style={{
-          padding: "100px 60px",
-          background: "#f7f7f7",
+          padding: '100px 60px',
+          background: '#f7f7f7',
         }}
       >
         <h2
           style={{
-            textAlign: "center",
-            fontSize: "42px",
-            marginBottom: "60px",
+            textAlign: 'center',
+            fontSize: '42px',
+            marginBottom: '60px',
           }}
         >
           Nos Services
@@ -120,30 +148,30 @@ export default function Home() {
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "30px",
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '30px',
           }}
         >
           {[
-            "Installation photovoltaïque",
-            "Kits solaires autonomes",
-            "Maintenance & dépannage",
-            "Études de rentabilité",
-            "Accompagnement administratif",
+            'Installation photovoltaïque',
+            'Kits solaires autonomes',
+            'Maintenance & dépannage',
+            'Études de rentabilité',
+            'Accompagnement administratif',
           ].map((service, index) => (
             <div
               key={index}
               style={{
-                background: "#fff",
-                padding: "40px",
-                borderRadius: "20px",
-                boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+                background: '#fff',
+                padding: '40px',
+                borderRadius: '20px',
+                boxShadow: '0 5px 20px rgba(0,0,0,0.08)',
               }}
             >
               <h3>{service}</h3>
 
-              <p style={{ color: "#666", lineHeight: "1.7" }}>
+              <p style={{ color: '#666', lineHeight: '1.7' }}>
                 Solution professionnelle adaptée à vos besoins
                 énergétiques avec accompagnement complet.
               </p>
@@ -156,20 +184,20 @@ export default function Home() {
       <section
         id="about"
         style={{
-          padding: "100px 60px",
+          padding: '100px 60px',
         }}
       >
         <div
           style={{
-            maxWidth: "1000px",
-            margin: "0 auto",
-            textAlign: "center",
+            maxWidth: '1000px',
+            margin: '0 auto',
+            textAlign: 'center',
           }}
         >
           <h2
             style={{
-              fontSize: "42px",
-              marginBottom: "30px",
+              fontSize: '42px',
+              marginBottom: '30px',
             }}
           >
             À propos d’ECOSOL Direct
@@ -177,9 +205,9 @@ export default function Home() {
 
           <p
             style={{
-              fontSize: "20px",
-              lineHeight: "1.8",
-              color: "#555",
+              fontSize: '20px',
+              lineHeight: '1.8',
+              color: '#555',
             }}
           >
             Nous accompagnons les particuliers, agriculteurs et
@@ -194,22 +222,22 @@ export default function Home() {
       <section
         id="contact"
         style={{
-          padding: "100px 60px",
-          background: "#111",
-          color: "#fff",
+          padding: '100px 60px',
+          background: '#111',
+          color: '#fff',
         }}
       >
         <div
           style={{
-            maxWidth: "700px",
-            margin: "0 auto",
-            textAlign: "center",
+            maxWidth: '700px',
+            margin: '0 auto',
+            textAlign: 'center',
           }}
         >
           <h2
             style={{
-              fontSize: "42px",
-              marginBottom: "20px",
+              fontSize: '42px',
+              marginBottom: '20px',
             }}
           >
             Demandez votre devis
@@ -217,26 +245,24 @@ export default function Home() {
 
           <p
             style={{
-              color: "#ccc",
-              marginBottom: "40px",
+              color: '#ccc',
+              marginBottom: '40px',
             }}
           >
             Remplissez le formulaire ci-dessous pour être recontacté.
           </p>
 
           <form
-            action="mailto:ecosoldirect.solaire@gmail.com"
-            method="POST"
-            encType="text/plain"
+            onSubmit={sendEmail}
             style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
             }}
           >
             <input
               type="text"
-              name="Nom"
+              name="nom"
               placeholder="Nom"
               required
               style={inputStyle}
@@ -244,7 +270,7 @@ export default function Home() {
 
             <input
               type="text"
-              name="Prénom"
+              name="prenom"
               placeholder="Prénom"
               required
               style={inputStyle}
@@ -252,7 +278,7 @@ export default function Home() {
 
             <input
               type="text"
-              name="Adresse"
+              name="adresse"
               placeholder="Adresse"
               required
               style={inputStyle}
@@ -260,7 +286,7 @@ export default function Home() {
 
             <input
               type="email"
-              name="Email"
+              name="email"
               placeholder="Adresse email"
               required
               style={inputStyle}
@@ -268,7 +294,7 @@ export default function Home() {
 
             <input
               type="tel"
-              name="Téléphone"
+              name="telephone"
               placeholder="Numéro de téléphone"
               required
               style={inputStyle}
@@ -276,7 +302,7 @@ export default function Home() {
 
             <input
               type="date"
-              name="Date souhaitée"
+              name="date"
               required
               style={inputStyle}
             />
@@ -284,37 +310,47 @@ export default function Home() {
             <button
               type="submit"
               style={{
-                padding: "20px",
-                background: "#00a8e8",
-                color: "#fff",
-                border: "none",
-                borderRadius: "12px",
-                fontSize: "18px",
-                fontWeight: "bold",
-                cursor: "pointer",
+                padding: '20px',
+                background: '#00a8e8',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '12px',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                cursor: 'pointer',
               }}
             >
               Demander un devis
             </button>
           </form>
+
+          <p
+            style={{
+              marginTop: '25px',
+              color: '#00d084',
+              fontWeight: 'bold',
+            }}
+          >
+            {status}
+          </p>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer
         style={{
-          padding: "40px",
-          textAlign: "center",
-          background: "#000",
-          color: "#fff",
+          padding: '40px',
+          textAlign: 'center',
+          background: '#000',
+          color: '#fff',
         }}
       >
         <img
           src="/logo.png"
           alt="ECOSOL Direct"
           style={{
-            height: "90px",
-            marginBottom: "20px",
+            height: '90px',
+            marginBottom: '20px',
           }}
         />
 
@@ -323,12 +359,12 @@ export default function Home() {
         </p>
       </footer>
     </main>
-  );
+  )
 }
 
 const inputStyle = {
-  padding: "18px",
-  borderRadius: "10px",
-  border: "none",
-  fontSize: "16px",
-};
+  padding: '18px',
+  borderRadius: '10px',
+  border: 'none',
+  fontSize: '16px',
+}
