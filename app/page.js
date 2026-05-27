@@ -81,7 +81,7 @@ export default function Home() {
           position: 'relative',
           height: '750px',
           backgroundImage:
-            "url('/hero-desktop.png')",
+            "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
