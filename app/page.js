@@ -190,6 +190,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* IMAGE AJOUTEE */}
+      <section
+        style={{
+          width: '100%',
+          marginBottom: '120px',
+        }}
+      >
+        <img
+          src="/installation-sol.png"
+          alt="Installation solaire au sol"
+          style={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+          }}
+        />
+      </section>
+
       {/* AVANTAGES */}
       <section
         id="avantages"
