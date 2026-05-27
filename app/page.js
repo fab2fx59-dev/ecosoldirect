@@ -74,13 +74,14 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* HERO */}
+      {/* HERO DESKTOP */}
       <section
+        className="desktop-image"
         style={{
           position: 'relative',
           height: '750px',
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop')",
+            "url('/hero-desktop.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
@@ -137,6 +138,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HERO MOBILE */}
+      <section
+        className="mobile-image"
+        style={{
+          display: 'none',
+          position: 'relative',
+          height: '650px',
+          backgroundImage:
+            "url('/hero-mobile.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          alignItems: 'center',
+          padding: '0 20px',
+          color: '#fff',
+          marginBottom: '80px',
+        }}
+      >
+        <div
+          style={{
+            background: 'rgba(0,0,0,0.55)',
+            padding: '30px',
+            borderRadius: '20px',
+          }}
+        >
+          <h2
+            style={{
+              fontSize: '38px',
+              marginBottom: '20px',
+            }}
+          >
+            L’énergie solaire pour votre avenir
+          </h2>
+
+          <p
+            style={{
+              fontSize: '18px',
+              lineHeight: '1.6',
+            }}
+          >
+            Solutions photovoltaïques performantes et durables.
+          </p>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section
         id="services"
@@ -182,8 +227,7 @@ export default function Home() {
               <h3>{service}</h3>
 
               <p style={{ color: '#666', lineHeight: '1.7' }}>
-                Solution professionnelle adaptée à vos besoins
-                énergétiques avec accompagnement complet.
+                Solution professionnelle adaptée à vos besoins.
               </p>
             </div>
           ))}
@@ -208,8 +252,9 @@ export default function Home() {
         />
       </section>
 
-      {/* AVANTAGES */}
+      {/* AVANTAGES DESKTOP */}
       <section
+        className="desktop-image"
         id="avantages"
         style={{
           padding: '0 60px',
@@ -218,7 +263,7 @@ export default function Home() {
       >
         <img
           src="/avantages.png"
-          alt="Pourquoi opter pour l'énergie solaire"
+          alt=""
           style={{
             width: '100%',
             borderRadius: '20px',
@@ -226,8 +271,28 @@ export default function Home() {
         />
       </section>
 
-      {/* REALISATIONS */}
+      {/* AVANTAGES MOBILE */}
       <section
+        className="mobile-image"
+        style={{
+          display: 'none',
+          padding: '0 20px',
+          marginBottom: '120px',
+        }}
+      >
+        <img
+          src="/avantage-mobile.png"
+          alt=""
+          style={{
+            width: '100%',
+            borderRadius: '20px',
+          }}
+        />
+      </section>
+
+      {/* REALISATIONS DESKTOP */}
+      <section
+        className="desktop-image"
         id="realisations"
         style={{
           padding: '0 60px',
@@ -236,7 +301,26 @@ export default function Home() {
       >
         <img
           src="/realisations.png"
-          alt="Découvrez nos réalisations"
+          alt=""
+          style={{
+            width: '100%',
+            borderRadius: '20px',
+          }}
+        />
+      </section>
+
+      {/* REALISATIONS MOBILE */}
+      <section
+        className="mobile-image"
+        style={{
+          display: 'none',
+          padding: '0 20px',
+          marginBottom: '120px',
+        }}
+      >
+        <img
+          src="/realisation_mobile.png"
+          alt=""
           style={{
             width: '100%',
             borderRadius: '20px',
@@ -278,8 +362,7 @@ export default function Home() {
           >
             Nous accompagnons les particuliers, agriculteurs et
             professionnels dans leur transition énergétique grâce à
-            des solutions photovoltaïques modernes, économiques et
-            performantes.
+            des solutions photovoltaïques modernes.
           </p>
         </div>
       </section>
@@ -308,15 +391,6 @@ export default function Home() {
           >
             Demandez votre devis
           </h2>
-
-          <p
-            style={{
-              color: '#ccc',
-              marginBottom: '40px',
-            }}
-          >
-            Remplissez le formulaire ci-dessous pour être recontacté.
-          </p>
 
           <form
             onSubmit={sendEmail}
