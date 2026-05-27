@@ -150,7 +150,6 @@ export default function Home() {
           {[
             "Installation photovoltaïque",
             "Kits solaires autonomes",
-            "Batteries & stockage",
             "Maintenance & dépannage",
             "Études de rentabilité",
             "Accompagnement administratif",
