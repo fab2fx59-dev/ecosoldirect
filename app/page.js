@@ -23,28 +23,12 @@ export default function Home() {
           zIndex: 1000,
         }}
       >
-   
-          <div>
-            <h1
-              style={{
-                margin: 0,
-                fontSize: "32px",
-                color: "#0099cc",
-              }}
-            >
-              ECOSOL DIRECT
-            </h1>
-
-            <p
-              style={{
-                margin: 0,
-                color: "#666",
-                fontSize: "14px",
-              }}
-            >
-              Énergie solaire & autonomie énergétique
-            </p>
-          </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img
+            src="/logo.png"
+            alt="ECOSOL Direct"
+            style={{ height: "80px" }}
+          />
         </div>
 
         <nav style={{ display: "flex", gap: "25px" }}>
@@ -271,7 +255,7 @@ export default function Home() {
           src="/logo.png"
           alt="ECOSOL Direct"
           style={{
-            height: "80px",
+            height: "90px",
             marginBottom: "20px",
           }}
         />
@@ -283,4 +267,3 @@ export default function Home() {
     </main>
   );
 }
-
