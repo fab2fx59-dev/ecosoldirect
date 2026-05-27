@@ -88,7 +88,6 @@ export default function Home() {
           alignItems: 'center',
           padding: '0 80px',
           color: '#fff',
-          marginBottom: '120px',
         }}
       >
         <div
@@ -149,7 +148,6 @@ export default function Home() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
-          marginBottom: '80px',
         }}
       >
         <div
@@ -181,6 +179,47 @@ export default function Home() {
             Solutions photovoltaïques performantes et durables.
           </p>
         </div>
+      </section>
+
+      {/* AVANTAGES FINANCIERS DESKTOP */}
+      <section
+        className="desktop-image"
+        style={{
+          width: '100%',
+          marginTop: '120px',
+          marginBottom: '120px',
+        }}
+      >
+        <img
+          src="/avantages-financiers.png"
+          alt="Avantages financiers"
+          style={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+          }}
+        />
+      </section>
+
+      {/* AVANTAGES FINANCIERS MOBILE */}
+      <section
+        className="mobile-image"
+        style={{
+          display: 'none',
+          width: '100%',
+          marginTop: '80px',
+          marginBottom: '80px',
+        }}
+      >
+        <img
+          src="/avantages-financiers-mobile.png"
+          alt="Avantages financiers mobile"
+          style={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+          }}
+        />
       </section>
 
       {/* SERVICES */}
@@ -234,259 +273,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* IMAGE SOUS SERVICES DESKTOP */}
-      <section
-        className="desktop-image"
-        style={{
-          width: '100%',
-          marginBottom: '120px',
-        }}
-      >
-        <img
-          src="/installation-sol.png"
-          alt="Installation solaire"
-          style={{
-            width: '100%',
-            height: 'auto',
-            display: 'block',
-          }}
-        />
-      </section>
-
-      {/* IMAGE SOUS SERVICES MOBILE */}
-      <section
-        className="mobile-image"
-        style={{
-          display: 'none',
-          width: '100%',
-          marginBottom: '120px',
-        }}
-      >
-        <img
-          src="/mobile-installation-sol.png"
-          alt="Installation solaire mobile"
-          style={{
-            width: '100%',
-            height: 'auto',
-            display: 'block',
-          }}
-        />
-      </section>
-
-      {/* AVANTAGES DESKTOP */}
-      <section
-        className="desktop-image"
-        id="avantages"
-        style={{
-          padding: '0 60px',
-          marginBottom: '120px',
-        }}
-      >
-        <img
-          src="/avantages.png"
-          alt="Avantages solaire"
-          style={{
-            width: '100%',
-            borderRadius: '20px',
-          }}
-        />
-      </section>
-
-      {/* AVANTAGES MOBILE */}
-      <section
-        className="mobile-image"
-        style={{
-          display: 'none',
-          padding: '0 20px',
-          marginBottom: '120px',
-        }}
-      >
-        <img
-          src="/avantage-mobile.png"
-          alt="Avantages solaire mobile"
-          style={{
-            width: '100%',
-            borderRadius: '20px',
-          }}
-        />
-      </section>
-
-      {/* REALISATIONS DESKTOP */}
-      <section
-        className="desktop-image"
-        id="realisations"
-        style={{
-          padding: '0 60px',
-          marginBottom: '120px',
-        }}
-      >
-        <img
-          src="/realisations.png"
-          alt="Réalisations"
-          style={{
-            width: '100%',
-            borderRadius: '20px',
-          }}
-        />
-      </section>
-
-      {/* REALISATIONS MOBILE */}
-      <section
-        className="mobile-image"
-        style={{
-          display: 'none',
-          padding: '0 20px',
-          marginBottom: '120px',
-        }}
-      >
-        <img
-          src="/mobile-realisations.png"
-          alt="Réalisations mobile"
-          style={{
-            width: '100%',
-            borderRadius: '20px',
-          }}
-        />
-      </section>
-
-      {/* ABOUT */}
-      <section
-        id="about"
-        style={{
-          padding: '100px 60px',
-          background: '#f7f7f7',
-          marginBottom: '120px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '1000px',
-            margin: '0 auto',
-            textAlign: 'center',
-          }}
-        >
-          <h2
-            style={{
-              fontSize: '42px',
-              marginBottom: '30px',
-            }}
-          >
-            À propos d’ECOSOL Direct
-          </h2>
-
-          <p
-            style={{
-              fontSize: '20px',
-              lineHeight: '1.8',
-              color: '#555',
-            }}
-          >
-            Nous accompagnons les particuliers, agriculteurs et
-            professionnels dans leur transition énergétique grâce à
-            des solutions photovoltaïques modernes.
-          </p>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section
-        id="contact"
-        style={{
-          padding: '100px 60px',
-          background: '#111',
-          color: '#fff',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '700px',
-            margin: '0 auto',
-            textAlign: 'center',
-          }}
-        >
-          <h2
-            style={{
-              fontSize: '42px',
-              marginBottom: '20px',
-            }}
-          >
-            Demandez votre devis
-          </h2>
-
-          <form
-            onSubmit={sendEmail}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-            }}
-          >
-            <input type="text" name="nom" placeholder="Nom" required style={inputStyle} />
-            <input type="text" name="prenom" placeholder="Prénom" required style={inputStyle} />
-            <input type="text" name="adresse" placeholder="Adresse" required style={inputStyle} />
-            <input type="email" name="email" placeholder="Adresse email" required style={inputStyle} />
-            <input type="tel" name="telephone" placeholder="Numéro de téléphone" required style={inputStyle} />
-            <input type="date" name="date" required style={inputStyle} />
-
-            <button
-              type="submit"
-              style={{
-                padding: '20px',
-                background: '#00a8e8',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '12px',
-                fontSize: '18px',
-                fontWeight: 'bold',
-                cursor: 'pointer',
-              }}
-            >
-              Demander un devis
-            </button>
-          </form>
-
-          <p
-            style={{
-              marginTop: '25px',
-              color: '#00d084',
-              fontWeight: 'bold',
-            }}
-          >
-            {status}
-          </p>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer
-        style={{
-          padding: '50px',
-          textAlign: 'center',
-          background: '#000',
-          color: '#fff',
-        }}
-      >
-        <img
-          src="/logo.png"
-          alt="ECOSOL Direct"
-          style={{
-            height: '90px',
-            marginBottom: '20px',
-          }}
-        />
-
-        <p>
-          © 2026 ECOSOL Direct — Tous droits réservés
-        </p>
-      </footer>
     </main>
   )
-}
-
-const inputStyle = {
-  padding: '18px',
-  borderRadius: '10px',
-  border: 'none',
-  fontSize: '16px',
 }
