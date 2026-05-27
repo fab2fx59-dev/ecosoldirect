@@ -23,13 +23,7 @@ export default function Home() {
           zIndex: 1000,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-          <img
-            src="/logo.png"
-            alt="ECOSOL Direct"
-            style={{ height: "70px" }}
-          />
-
+   
           <div>
             <h1
               style={{
