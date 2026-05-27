@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'ECOSOLL Direct',
+  title: 'ECOSOL Direct',
   description: 'Entreprise spécialisée en énergie solaire',
 }
 
