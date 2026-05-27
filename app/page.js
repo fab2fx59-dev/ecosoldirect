@@ -235,8 +235,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* IMAGE SOUS SERVICES */}
+      {/* IMAGE SOUS SERVICES DESKTOP */}
       <section
+        className="desktop-image"
         style={{
           width: '100%',
           marginBottom: '120px',
@@ -245,6 +246,26 @@ export default function Home() {
         <img
           src="/installation-sol.png"
           alt="Installation solaire"
+          style={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+          }}
+        />
+      </section>
+
+      {/* IMAGE SOUS SERVICES MOBILE */}
+      <section
+        className="mobile-image"
+        style={{
+          display: 'none',
+          width: '100%',
+          marginBottom: '120px',
+        }}
+      >
+        <img
+          src="/mobile-installation-sol.png"
+          alt="Installation solaire mobile"
           style={{
             width: '100%',
             height: 'auto',
