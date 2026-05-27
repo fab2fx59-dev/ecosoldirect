@@ -3,8 +3,10 @@ export default function Home() {
     <main
       style={{
         fontFamily: "Arial, sans-serif",
-        backgroundColor: "#fff",
-        color: "#10233f",
+        backgroundColor: "#ffffff",
+        color: "#111",
+        margin: 0,
+        padding: 0,
       }}
     >
       {/* HEADER */}
@@ -13,158 +15,160 @@ export default function Home() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "25px 7%",
-          borderBottom: "1px solid #eaeaea",
-          background: "#fff",
+          padding: "20px 60px",
+          borderBottom: "1px solid #eee",
           position: "sticky",
           top: 0,
-          zIndex: 100,
+          background: "#fff",
+          zIndex: 1000,
         }}
       >
-        <img
-          src="/logo.png"
-          alt="ECOSOL DIRECT"
-          style={{ height: "80px" }}
-        />
+        <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+          <img
+            src="/logo.png"
+            alt="ECOSOL Direct"
+            style={{ height: "70px" }}
+          />
 
-        <nav style={{ display: "flex", gap: "30px" }}>
-          <a href="#services" style={linkStyle}>
-            Services
-          </a>
-          <a href="#about" style={linkStyle}>
-            À propos
-          </a>
-          <a href="#contact" style={linkStyle}>
-            Contact
-          </a>
+          <div>
+            <h1
+              style={{
+                margin: 0,
+                fontSize: "32px",
+                color: "#0099cc",
+              }}
+            >
+              ECOSOL DIRECT
+            </h1>
+
+            <p
+              style={{
+                margin: 0,
+                color: "#666",
+                fontSize: "14px",
+              }}
+            >
+              Énergie solaire & autonomie énergétique
+            </p>
+          </div>
+        </div>
+
+        <nav style={{ display: "flex", gap: "25px" }}>
+          <a href="#services">Services</a>
+          <a href="#about">À propos</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
       {/* HERO */}
       <section
         style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          position: "relative",
+          height: "700px",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
           alignItems: "center",
-          minHeight: "85vh",
-          padding: "80px 7%",
-          gap: "60px",
-          background:
-            "linear-gradient(to right,#ffffff 30%,#edf9ff 100%)",
+          padding: "0 80px",
+          color: "#fff",
         }}
       >
-        <div>
-          <p
+        <div
+          style={{
+            background: "rgba(0,0,0,0.55)",
+            padding: "50px",
+            maxWidth: "700px",
+            borderRadius: "20px",
+          }}
+        >
+          <h2
             style={{
-              color: "#00a0d6",
-              fontWeight: "bold",
-              fontSize: "18px",
+              fontSize: "60px",
+              marginBottom: "20px",
             }}
           >
-            ÉNERGIE RENOUVELABLE
-          </p>
-
-          <h1
-            style={{
-              fontSize: "68px",
-              lineHeight: "1.05",
-              margin: "20px 0",
-            }}
-          >
-            Adoptez
-            <br />
-            l’énergie solaire
-          </h1>
+            L’énergie solaire pour votre avenir
+          </h2>
 
           <p
             style={{
               fontSize: "22px",
-              lineHeight: "1.7",
-              color: "#5b6675",
-              marginBottom: "35px",
+              lineHeight: "1.6",
             }}
           >
-            Installation de panneaux photovoltaïques au sol,
-            autoconsommation, batteries et solutions énergétiques
-            intelligentes pour particuliers et professionnels.
+            ECOSOL Direct accompagne particuliers et professionnels
+            dans leurs projets photovoltaïques avec des solutions
+            performantes et durables.
           </p>
 
           <a
             href="#contact"
             style={{
-              background: "#00a0d6",
-              color: "#fff",
-              padding: "18px 34px",
-              borderRadius: "12px",
-              textDecoration: "none",
-              fontWeight: "bold",
               display: "inline-block",
+              marginTop: "30px",
+              padding: "18px 35px",
+              background: "#00a8e8",
+              color: "#fff",
+              textDecoration: "none",
+              borderRadius: "10px",
+              fontWeight: "bold",
+              fontSize: "18px",
             }}
           >
             Demander un devis
           </a>
         </div>
-
-        <img
-          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400"
-          alt="Panneaux solaires"
-          style={{
-            width: "100%",
-            borderRadius: "24px",
-            boxShadow: "0 25px 60px rgba(0,0,0,0.15)",
-          }}
-        />
       </section>
 
       {/* SERVICES */}
       <section
         id="services"
         style={{
-          padding: "100px 7%",
+          padding: "100px 60px",
+          background: "#f7f7f7",
         }}
       >
         <h2
           style={{
-            fontSize: "50px",
             textAlign: "center",
-            marginBottom: "70px",
+            fontSize: "42px",
+            marginBottom: "60px",
           }}
         >
-          Nos services
+          Nos Services
         </h2>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: "30px",
           }}
         >
           {[
-            "Installation solaire",
-            "Batteries de stockage",
-            "Autoconsommation",
-            "Maintenance & SAV",
-          ].map((service) => (
+            "Installation photovoltaïque",
+            "Kits solaires autonomes",
+            "Batteries & stockage",
+            "Maintenance & dépannage",
+            "Études de rentabilité",
+            "Accompagnement administratif",
+          ].map((service, index) => (
             <div
-              key={service}
+              key={index}
               style={{
-                background: "#f8fbfd",
+                background: "#fff",
                 padding: "40px",
                 borderRadius: "20px",
-                border: "1px solid #e6f2f7",
+                boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
               }}
             >
-              <h3 style={{ fontSize: "28px" }}>{service}</h3>
+              <h3>{service}</h3>
 
-              <p
-                style={{
-                  color: "#5b6675",
-                  lineHeight: "1.8",
-                }}
-              >
-                Solutions professionnelles performantes et durables adaptées à
-                vos besoins énergétiques.
+              <p style={{ color: "#666", lineHeight: "1.7" }}>
+                Solution professionnelle adaptée à vos besoins
+                énergétiques avec accompagnement complet.
               </p>
             </div>
           ))}
@@ -175,36 +179,36 @@ export default function Home() {
       <section
         id="about"
         style={{
-          background: "#f4fbff",
-          padding: "100px 7%",
+          padding: "100px 60px",
         }}
       >
         <div
           style={{
             maxWidth: "1000px",
-            margin: "auto",
+            margin: "0 auto",
             textAlign: "center",
           }}
         >
           <h2
             style={{
-              fontSize: "50px",
+              fontSize: "42px",
               marginBottom: "30px",
             }}
           >
-            Pourquoi choisir ECOSOL DIRECT ?
+            À propos d’ECOSOL Direct
           </h2>
 
           <p
             style={{
-              fontSize: "22px",
-              lineHeight: "1.9",
-              color: "#5b6675",
+              fontSize: "20px",
+              lineHeight: "1.8",
+              color: "#555",
             }}
           >
-            Nous accompagnons les particuliers et entreprises dans leur
-            transition énergétique grâce à des solutions fiables,
-            modernes et rentables.
+            Nous accompagnons les particuliers, agriculteurs et
+            professionnels dans leur transition énergétique grâce à
+            des solutions photovoltaïques modernes, économiques et
+            performantes.
           </p>
         </div>
       </section>
@@ -213,119 +217,76 @@ export default function Home() {
       <section
         id="contact"
         style={{
-          padding: "100px 7%",
-          background: "#10233f",
+          padding: "100px 60px",
+          background: "#111",
           color: "#fff",
         }}
       >
         <div
           style={{
             maxWidth: "700px",
-            margin: "auto",
+            margin: "0 auto",
+            textAlign: "center",
           }}
         >
           <h2
             style={{
-              fontSize: "50px",
-              marginBottom: "25px",
-              textAlign: "center",
+              fontSize: "42px",
+              marginBottom: "20px",
             }}
           >
-            Contactez-nous
+            Contact
           </h2>
 
           <p
             style={{
-              textAlign: "center",
-              marginBottom: "50px",
-              color: "#d7e1ea",
-              fontSize: "20px",
+              color: "#ccc",
+              marginBottom: "40px",
             }}
           >
-            Obtenez votre étude solaire gratuite
+            Demandez votre étude solaire gratuitement.
           </p>
 
-          <form
-            action="mailto:ecosoldirect.solaire@gmail.com"
-            method="POST"
-            encType="text/plain"
+          <a
+            href="mailto:ecosoldirect.solaire@gmail.com"
             style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
+              display: "inline-block",
+              padding: "18px 40px",
+              background: "#00a8e8",
+              color: "#fff",
+              textDecoration: "none",
+              borderRadius: "12px",
+              fontWeight: "bold",
+              fontSize: "18px",
             }}
           >
-            <input
-              type="text"
-              placeholder="Nom"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              style={inputStyle}
-            />
-
-            <input
-              type="tel"
-              placeholder="Téléphone"
-              style={inputStyle}
-            />
-
-            <textarea
-              placeholder="Votre message"
-              rows="6"
-              required
-              style={inputStyle}
-            ></textarea>
-
-            <button
-              type="submit"
-              style={{
-                background: "#00a0d6",
-                color: "#fff",
-                border: "none",
-                padding: "18px",
-                borderRadius: "12px",
-                fontSize: "18px",
-                cursor: "pointer",
-                fontWeight: "bold",
-              }}
-            >
-              Envoyer
-            </button>
-          </form>
+            Envoyer un email
+          </a>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer
         style={{
-          padding: "30px",
+          padding: "40px",
           textAlign: "center",
-          background: "#0b1b31",
-          color: "#cfd7df",
+          background: "#000",
+          color: "#fff",
         }}
       >
-        © 2026 ECOSOL DIRECT — Tous droits réservés
+        <img
+          src="/logo.png"
+          alt="ECOSOL Direct"
+          style={{
+            height: "80px",
+            marginBottom: "20px",
+          }}
+        />
+
+        <p>
+          © 2026 ECOSOL Direct — Tous droits réservés
+        </p>
       </footer>
     </main>
   );
 }
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "#10233f",
-  fontWeight: "600",
-};
-
-const inputStyle = {
-  padding: "18px",
-  borderRadius: "12px",
-  border: "none",
-  fontSize: "16px",
-};
-
