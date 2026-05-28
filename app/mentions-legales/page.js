@@ -16,7 +16,7 @@ export default function MentionsLegales() {
       <p>L’ensemble des contenus présents sur le site ECOSOL Direct est protégé.</p>
 
       <h2>Contact</h2>
-      <p>tmrrclothing@gmail.com</p>
+      <p>contact@ecosoldirect.fr</p>
     </main>
   )
 }
