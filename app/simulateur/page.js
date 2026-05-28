@@ -25,8 +25,7 @@ const appliances = [
 
   { id: 'climatisation', name: 'Climatisation', power: 1500, hours: 5 },
 
-  { id: 'pompe', name: 'Pompe à eau', power: 1500, hours: 3 },
-]
+  ]
 
 const offers = [
   {
