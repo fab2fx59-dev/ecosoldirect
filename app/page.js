@@ -6,21 +6,24 @@
     className="logo"
   />
 
-  <nav>
-    <a href="#services">Services</a>
+  ```jsx id="x4u8nh"
+<nav>
+  <a href="#services">Services</a>
 
-    <a href="/simulateur">
-      Simulateur
-    </a>
+  <a href="/simulateur">
+    Simulateur
+  </a>
 
-    <a href="#avantages">Avantages</a>
+  <a href="#avantages">Avantages</a>
 
-    <a href="#realisations">Réalisations</a>
+  <a href="#realisations">Réalisations</a>
 
-    <a href="#about">À propos</a>
+  <a href="#about">À propos</a>
 
-    <a href="#contact">Contact</a>
-  </nav>
+  <a href="#contact">Contact</a>
+</nav>
+```
+
 </header>
 
 <section className="hero">
