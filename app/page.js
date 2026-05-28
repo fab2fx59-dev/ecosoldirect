@@ -1,5 +1,6 @@
-```javascript
-'use client'
+from pathlib import Path
+
+code = r"""'use client'
 
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
@@ -19,15 +20,11 @@ export default function Home() {
         'WYga_xEvWDRSsyJk1'
       )
       .then(() => {
-        setStatus(
-          'Votre demande a bien été envoyée. Nous vous recontacterons rapidement.'
-        )
+        setStatus('Votre demande a bien été envoyée. Nous vous recontacterons rapidement.')
         e.target.reset()
       })
       .catch(() => {
-        setStatus(
-          "Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement."
-        )
+        setStatus("Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement.")
       })
   }
 
@@ -36,45 +33,28 @@ export default function Home() {
       <style>{styles}</style>
 
       <header className="header">
-        <img
-          src="/logo.png"
-          alt="ECOSOL Direct"
-          className="logo"
-        />
+        <img src="/logo.png" alt="ECOSOL Direct" className="logo" />
 
         <nav className="nav">
           <a href="#services">Services</a>
           <a href="#avantages">Avantages</a>
           <a href="#realisations">Réalisations</a>
           <a href="#about">À propos</a>
-          <a href="#contact" className="nav-cta">
-            Devis
-          </a>
+          <a href="#contact" className="nav-cta">Devis</a>
         </nav>
       </header>
 
       <section className="hero desktop-image">
         <div className="hero-card">
-          <p className="eyebrow">
-            Installation photovoltaïque · Particuliers · Professionnels
-          </p>
-
+          <p className="eyebrow">Installation photovoltaïque · Particuliers · Professionnels</p>
           <h1>L’énergie solaire pour votre avenir</h1>
-
           <p>
-            ECOSOL Direct accompagne particuliers et professionnels
-            dans leurs projets photovoltaïques avec des solutions
-            performantes et durables.
+            ECOSOL Direct accompagne particuliers et professionnels dans leurs projets photovoltaïques avec des solutions performantes et durables.
           </p>
 
           <div className="hero-actions">
-            <a href="#contact" className="primary-button">
-              Demander un devis
-            </a>
-
-            <a href="#services" className="secondary-button">
-              Découvrir nos services
-            </a>
+            <a href="#contact" className="primary-button">Demander un devis</a>
+            <a href="#services" className="secondary-button">Découvrir nos services</a>
           </div>
         </div>
       </section>
@@ -82,76 +62,52 @@ export default function Home() {
       <section className="hero-mobile mobile-image">
         <div className="hero-card mobile-card">
           <p className="eyebrow">Photovoltaïque clé en main</p>
-
           <h1>L’énergie solaire pour votre avenir</h1>
-
           <p>Solutions photovoltaïques performantes et durables.</p>
-
-          <a href="#contact" className="primary-button">
-            Demander un devis
-          </a>
+          <a href="#contact" className="primary-button">Demander un devis</a>
         </div>
       </section>
 
       <section className="image-section desktop-image">
-        <img
-          src="/avantages-financiers.png"
-          alt="Avantages financiers"
-        />
+        <img src="/avantages-financiers.png" alt="Avantages financiers" />
       </section>
 
       <section className="image-section mobile-image">
-        <img
-          src="/avantages-financiers-mobile.png"
-          alt="Avantages financiers mobile"
-        />
+        <img src="/avantages-financiers-mobile.png" alt="Avantages financiers mobile" />
       </section>
 
       <section id="services" className="section light-section">
         <div className="section-container">
           <p className="section-tag center">Nos expertises</p>
-
           <h2 className="section-title">Nos Services</h2>
-
-          <p className="section-subtitle">
-            Des solutions solaires pensées pour vous accompagner.
-          </p>
+          <p className="section-subtitle">Des solutions solaires pensées pour vous accompagner.</p>
 
           <div className="services-grid">
             {[
               {
                 title: 'Installation photovoltaïque',
-                text:
-                  'Pose de panneaux solaires pour produire votre propre électricité.',
+                text: 'Pose de panneaux solaires pour produire votre propre électricité.',
               },
               {
                 title: 'Kits solaires autonomes',
-                text:
-                  'Solutions solaires adaptées aux besoins d’autonomie énergétique.',
+                text: 'Solutions solaires adaptées aux besoins d’autonomie énergétique.',
               },
               {
                 title: 'Maintenance & dépannage',
-                text:
-                  'Contrôle, entretien et intervention pour préserver les performances.',
+                text: 'Contrôle, entretien et intervention pour préserver les performances.',
               },
               {
                 title: 'Études de rentabilité',
-                text:
-                  'Analyse de votre consommation et projection des économies.',
+                text: 'Analyse de votre consommation et projection des économies.',
               },
               {
                 title: 'Accompagnement administratif',
-                text:
-                  'Aide dans les démarches liées à votre projet solaire.',
+                text: 'Aide dans les démarches liées à votre projet solaire.',
               },
             ].map((service, index) => (
               <article key={index} className="service-card">
-                <span className="service-number">
-                  0{index + 1}
-                </span>
-
+                <span className="service-number">0{index + 1}</span>
                 <h3>{service.title}</h3>
-
                 <p>{service.text}</p>
               </article>
             ))}
@@ -160,79 +116,43 @@ export default function Home() {
       </section>
 
       <section className="image-section desktop-image">
-        <img
-          src="/offre_solaire.png"
-          alt="Offre solaire"
-        />
+        <img src="/offre_solaire.png" alt="Offre solaire" />
       </section>
 
       <section className="image-section mobile-image">
-        <img
-          src="/offre_solaire_mobile.png"
-          alt="Offre solaire mobile"
-        />
+        <img src="/offre_solaire_mobile.png" alt="Offre solaire mobile" />
       </section>
 
       <section className="image-section desktop-image">
-        <img
-          src="/installation-sol.png"
-          alt="Installation solaire"
-        />
+        <img src="/installation-sol.png" alt="Installation solaire" />
       </section>
 
       <section className="image-section mobile-image">
-        <img
-          src="/mobile-installation-sol.png"
-          alt="Installation solaire mobile"
-        />
+        <img src="/mobile-installation-sol.png" alt="Installation solaire mobile" />
       </section>
 
-      <section
-        className="image-section contained desktop-image"
-        id="avantages"
-      >
-        <img
-          src="/avantages.png"
-          alt="Avantages solaire"
-        />
+      <section className="image-section contained desktop-image" id="avantages">
+        <img src="/avantages.png" alt="Avantages solaire" />
       </section>
 
       <section className="image-section contained mobile-image">
-        <img
-          src="/avantage-mobile.png"
-          alt="Avantages solaire mobile"
-        />
+        <img src="/avantage-mobile.png" alt="Avantages solaire mobile" />
       </section>
 
-      <section
-        className="image-section contained desktop-image"
-        id="realisations"
-      >
-        <img
-          src="/realisations.png"
-          alt="Réalisations"
-        />
+      <section className="image-section contained desktop-image" id="realisations">
+        <img src="/realisations.png" alt="Réalisations" />
       </section>
 
       <section className="image-section contained mobile-image">
-        <img
-          src="/mobile-realisations.png"
-          alt="Réalisations mobile"
-        />
+        <img src="/mobile-realisations.png" alt="Réalisations mobile" />
       </section>
 
       <section id="about" className="section light-section">
         <div className="section-container center-text">
           <p className="section-tag center">À propos</p>
-
-          <h2 className="section-title">
-            À propos d’ECOSOL Direct
-          </h2>
-
+          <h2 className="section-title">À propos d’ECOSOL Direct</h2>
           <p className="section-subtitle">
-            Nous accompagnons les particuliers, agriculteurs et
-            professionnels dans leur transition énergétique grâce à
-            des solutions photovoltaïques modernes.
+            Nous accompagnons les particuliers, agriculteurs et professionnels dans leur transition énergétique grâce à des solutions photovoltaïques modernes.
           </p>
         </div>
       </section>
@@ -241,90 +161,38 @@ export default function Home() {
         <div className="contact-container">
           <div className="contact-intro">
             <p className="section-tag">Étude gratuite</p>
-
             <h2>Demandez votre devis</h2>
-
-            <p>
-              Laissez vos coordonnées. Nous vous recontactons
-              rapidement.
-            </p>
+            <p>Laissez vos coordonnées. Nous vous recontactons rapidement.</p>
           </div>
 
           <form onSubmit={sendEmail} className="contact-form">
             <div className="form-row">
-              <input
-                type="text"
-                name="nom"
-                placeholder="Nom"
-                required
-              />
-
-              <input
-                type="text"
-                name="prenom"
-                placeholder="Prénom"
-                required
-              />
+              <input type="text" name="nom" placeholder="Nom" required />
+              <input type="text" name="prenom" placeholder="Prénom" required />
             </div>
 
-            <input
-              type="text"
-              name="adresse"
-              placeholder="Adresse complète"
-              required
-            />
+            <input type="text" name="adresse" placeholder="Adresse complète" required />
 
             <div className="form-row">
-              <input
-                type="email"
-                name="email"
-                placeholder="Adresse email"
-                required
-              />
-
-              <input
-                type="tel"
-                name="telephone"
-                placeholder="Téléphone"
-                required
-              />
+              <input type="email" name="email" placeholder="Adresse email" required />
+              <input type="tel" name="telephone" placeholder="Téléphone" required />
             </div>
 
-            <textarea
-              name="message"
-              placeholder="Décrivez votre projet..."
-              rows="5"
-            />
+            <textarea name="message" placeholder="Décrivez votre projet..." rows="5" />
 
-            <button type="submit">
-              Demander un devis gratuit
-            </button>
-
+            <button type="submit">Demander un devis gratuit</button>
             <p className="form-status">{status}</p>
           </form>
         </div>
       </section>
 
       <footer className="footer">
-        <img
-          src="/logo.png"
-          alt="ECOSOL Direct"
-          className="footer-logo"
-        />
-
-        <p>
-          © 2026 ECOSOL Direct — Tous droits réservés
-        </p>
+        <img src="/logo.png" alt="ECOSOL Direct" className="footer-logo" />
+        <p>© 2026 ECOSOL Direct — Tous droits réservés</p>
 
         <div className="footer-links">
-          <a href="/mentions-legales">
-            Mentions légales
-          </a>
-
-          <a href="/politique-confidentialite">
-            Politique de confidentialité
-          </a>
-
+          <a href="/mentions-legales">Mentions légales</a>
+          <a href="/politique-confidentialite">Politique de confidentialité</a>
           <a href="#contact">Contact</a>
         </div>
       </footer>
@@ -389,9 +257,7 @@ body {
 
 .hero {
   min-height: 760px;
-  background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -461,10 +327,7 @@ body {
   margin: 0 auto;
 }
 
-.center {
-  text-align: center;
-}
-
+.center,
 .center-text {
   text-align: center;
 }
@@ -631,9 +494,7 @@ body {
   .hero-mobile {
     display: flex;
     min-height: 650px;
-    background-image:
-      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-      url('/hero-mobile.png');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/hero-mobile.png');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -694,4 +555,7 @@ body {
   }
 }
 `
-```
+"""
+path = Path("/mnt/data/page.js")
+path.write_text(code, encoding="utf-8")
+print(f"Fichier créé : {path}")
