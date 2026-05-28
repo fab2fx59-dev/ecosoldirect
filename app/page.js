@@ -1,3 +1,4 @@
+```javascript
 'use client'
 
 import emailjs from '@emailjs/browser'
@@ -30,7 +31,6 @@ export default function Home() {
     <main className="site-wrapper">
       <style>{styles}</style>
 
-      {/* HEADER */}
       <header className="header">
         <a href="#top" aria-label="Retour à l'accueil ECOSOL Direct">
           <img src="/logo.png" alt="ECOSOL Direct - Installation photovoltaïque" className="logo" />
@@ -45,8 +45,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* HERO DESKTOP */}
-      <section id="top" className="hero desktop-image" aria-label="Installation de panneaux solaires">
+      <section id="top" className="hero desktop-image">
         <div className="hero-card">
           <p className="eyebrow">Installation photovoltaïque · Particuliers · Professionnels · Agricole</p>
           <h1>L’énergie solaire pour votre avenir</h1>
@@ -63,8 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HERO MOBILE */}
-      <section className="hero-mobile mobile-image" aria-label="Installation solaire mobile">
+      <section className="hero-mobile mobile-image">
         <div className="hero-card mobile-card">
           <p className="eyebrow">Photovoltaïque clé en main</p>
           <h1>L’énergie solaire pour votre avenir</h1>
@@ -73,7 +71,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INTRO SEO */}
       <section className="intro-section">
         <div className="section-container intro-grid">
           <div>
@@ -88,17 +85,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AVANTAGES FINANCIERS DESKTOP */}
       <section className="image-section desktop-image">
         <img src="/avantages-financiers.png" alt="Avantages financiers des panneaux solaires ECOSOL Direct" />
       </section>
 
-      {/* AVANTAGES FINANCIERS MOBILE */}
       <section className="image-section mobile-image">
         <img src="/avantages-financiers-mobile.png" alt="Avantages financiers solaire mobile" />
       </section>
 
-      {/* SERVICES */}
       <section id="services" className="section light-section">
         <div className="section-container">
           <p className="section-tag center">Nos expertises</p>
@@ -140,31 +134,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OFFRE SOLAIRE DESKTOP */}
       <section className="image-section desktop-image">
         <img src="/offre_solaire.png" alt="Offre solaire ECOSOL Direct" />
       </section>
 
-      {/* OFFRE SOLAIRE MOBILE */}
       <section className="image-section mobile-image">
         <img src="/offre_solaire_mobile.png" alt="Offre solaire mobile ECOSOL Direct" />
       </section>
 
-      {/* IMAGE SOUS SERVICES DESKTOP */}
       <section className="image-section desktop-image">
         <img src="/installation-sol.png" alt="Installation solaire au sol" />
       </section>
 
-      {/* IMAGE SOUS SERVICES MOBILE */}
       <section className="image-section mobile-image">
         <img src="/mobile-installation-sol.png" alt="Installation solaire au sol mobile" />
       </section>
 
-      {/* AVANTAGES TEXTE SEO */}
       <section id="avantages" className="section advantages-text-section">
         <div className="section-container">
           <p className="section-tag center">Pourquoi passer au solaire ?</p>
           <h2 className="section-title">Les avantages du photovoltaïque</h2>
+
           <div className="benefits-grid">
             <article>
               <h3>Réduction des factures</h3>
@@ -182,27 +172,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AVANTAGES DESKTOP */}
       <section className="image-section contained desktop-image">
         <img src="/avantages.png" alt="Avantages des panneaux solaires" />
       </section>
 
-      {/* AVANTAGES MOBILE */}
       <section className="image-section contained mobile-image">
         <img src="/avantage-mobile.png" alt="Avantages panneaux solaires mobile" />
       </section>
 
-      {/* REALISATIONS DESKTOP */}
       <section id="realisations" className="image-section contained desktop-image">
         <img src="/realisations.png" alt="Réalisations photovoltaïques ECOSOL Direct" />
       </section>
 
-      {/* REALISATIONS MOBILE */}
       <section className="image-section contained mobile-image">
         <img src="/mobile-realisations.png" alt="Réalisations photovoltaïques mobile" />
       </section>
 
-      {/* ABOUT */}
       <section id="about" className="section light-section about-section">
         <div className="section-container narrow center-text">
           <p className="section-tag center">À propos</p>
@@ -218,7 +203,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
       <section id="contact" className="contact-section">
         <div className="contact-container">
           <div className="contact-intro">
@@ -254,7 +238,11 @@ export default function Home() {
               <input type="date" name="date" required />
             </div>
 
-            <textarea name="message" placeholder="Décrivez brièvement votre projet : toiture, terrain, facture d’électricité, puissance souhaitée..." rows="5" />
+            <textarea
+              name="message"
+              placeholder="Décrivez brièvement votre projet : toiture, terrain, facture d’électricité, puissance souhaitée..."
+              rows="5"
+            />
 
             <label className="consent-label">
               <input type="checkbox" name="consentement" required />
@@ -268,7 +256,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <img src="/logo.png" alt="ECOSOL Direct" className="footer-logo" />
 
@@ -502,17 +489,26 @@ const styles = `
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
   }
 
   .service-card,
   .benefits-grid article {
     background: #ffffff;
-    padding: 34px;
+    padding: 28px;
     border-radius: 24px;
     box-shadow: 0 16px 50px rgba(15, 23, 42, 0.08);
     border: 1px solid rgba(15, 23, 42, 0.06);
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 320px;
+    height: 100%;
   }
 
   .service-number {
@@ -525,8 +521,14 @@ const styles = `
 
   .service-card h3,
   .benefits-grid h3 {
-    font-size: 22px;
-    margin: 0 0 12px;
+    font-size: 21px;
+    margin: 0 0 14px;
+  }
+
+  .service-card h3 {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
   }
 
   .service-card p,
@@ -705,6 +707,12 @@ const styles = `
     display: none;
   }
 
+  @media (max-width: 1100px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 900px) {
     .header {
       padding: 14px 20px;
@@ -784,6 +792,20 @@ const styles = `
     }
   }
 
+  @media (max-width: 650px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      min-height: auto;
+    }
+
+    .service-card h3 {
+      min-height: auto;
+    }
+  }
+
   @media (max-width: 520px) {
     .nav-cta {
       padding: 10px 16px;
@@ -807,3 +829,4 @@ const styles = `
     }
   }
 `
+```
