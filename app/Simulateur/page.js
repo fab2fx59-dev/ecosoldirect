@@ -1,35 +1,4 @@
-```jsx
-<a href="#simulateur">Simulateur</a>
-```
 
-par :
-
-```jsx
-<a href="/simulateur">Simulateur</a>
-```
-
-Donc ton menu complet devient :
-
-```jsx
-<nav>
-  <a href="#services">Services</a>
-  <a href="/simulateur">Simulateur</a>
-  <a href="#avantages">Avantages</a>
-  <a href="#realisations">Réalisations</a>
-  <a href="#about">À propos</a>
-  <a href="#contact">Contact</a>
-</nav>
-```
-
-Et dans ton nouveau fichier :
-
-```txt
-app/simulateur/page.js
-```
-
-colle ce code complet :
-
-```javascript
 'use client'
 
 import { useMemo, useState } from 'react'
