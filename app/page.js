@@ -1,4 +1,5 @@
 ```jsx id="pf2x6k"
+```jsx
 <header>
   <img
     src="/logo.png"
@@ -6,25 +7,32 @@
     className="logo"
   />
 
-  ```jsx id="x4u8nh"
-<nav>
-  <a href="#services">Services</a>
+  <nav>
+    <a href="#services">Services</a>
 
-  <a href="/simulateur">
-    Simulateur
-  </a>
+    <a href="/simulateur">
+      Simulateur
+    </a>
 
-  <a href="#avantages">Avantages</a>
+    <a href="#avantages">
+      Avantages
+    </a>
 
-  <a href="#realisations">Réalisations</a>
+    <a href="#realisations">
+      Réalisations
+    </a>
 
-  <a href="#about">À propos</a>
+    <a href="#about">
+      À propos
+    </a>
 
-  <a href="#contact">Contact</a>
-</nav>
+    <a href="#contact">
+      Contact
+    </a>
+  </nav>
+</header>
 ```
 
-</header>
 
 <section className="hero">
   <div className="hero-box">
