@@ -571,3 +571,4 @@ const inputStyle = {
   border: 'none',
   fontSize: '16px',
 }
+
