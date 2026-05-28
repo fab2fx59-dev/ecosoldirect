@@ -19,11 +19,15 @@ export default function Home() {
         'WYga_xEvWDRSsyJk1'
       )
       .then(() => {
-        setStatus('Votre demande a bien été envoyée. Nous vous recontacterons rapidement.')
+        setStatus(
+          'Votre demande a bien été envoyée. Nous vous recontacterons rapidement.'
+        )
         e.target.reset()
       })
       .catch(() => {
-        setStatus("Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement.")
+        setStatus(
+          "Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement."
+        )
       })
   }
 
@@ -32,32 +36,45 @@ export default function Home() {
       <style>{styles}</style>
 
       <header className="header">
-        <a href="#top" aria-label="Retour à l'accueil ECOSOL Direct">
-          <img src="/logo.png" alt="ECOSOL Direct - Installation photovoltaïque" className="logo" />
-        </a>
+        <img
+          src="/logo.png"
+          alt="ECOSOL Direct"
+          className="logo"
+        />
 
-        <nav className="nav" aria-label="Navigation principale">
+        <nav className="nav">
           <a href="#services">Services</a>
           <a href="#avantages">Avantages</a>
           <a href="#realisations">Réalisations</a>
           <a href="#about">À propos</a>
-          <a href="#contact" className="nav-cta">Devis</a>
+          <a href="#contact" className="nav-cta">
+            Devis
+          </a>
         </nav>
       </header>
 
-      <section id="top" className="hero desktop-image">
+      <section className="hero desktop-image">
         <div className="hero-card">
-          <p className="eyebrow">Installation photovoltaïque · Particuliers · Professionnels · Agricole</p>
+          <p className="eyebrow">
+            Installation photovoltaïque · Particuliers · Professionnels
+          </p>
+
           <h1>L’énergie solaire pour votre avenir</h1>
+
           <p>
-            ECOSOL Direct accompagne particuliers, agriculteurs et professionnels
-            dans leurs projets photovoltaïques avec des solutions performantes,
-            durables et adaptées à leur consommation.
+            ECOSOL Direct accompagne particuliers et professionnels
+            dans leurs projets photovoltaïques avec des solutions
+            performantes et durables.
           </p>
 
           <div className="hero-actions">
-            <a href="#contact" className="primary-button">Demander un devis gratuit</a>
-            <a href="#services" className="secondary-button">Découvrir nos services</a>
+            <a href="#contact" className="primary-button">
+              Demander un devis
+            </a>
+
+            <a href="#services" className="secondary-button">
+              Découvrir nos services
+            </a>
           </div>
         </div>
       </section>
@@ -65,68 +82,76 @@ export default function Home() {
       <section className="hero-mobile mobile-image">
         <div className="hero-card mobile-card">
           <p className="eyebrow">Photovoltaïque clé en main</p>
-          <h1>L’énergie solaire pour votre avenir</h1>
-          <p>Solutions photovoltaïques performantes et durables.</p>
-          <a href="#contact" className="primary-button">Demander un devis</a>
-        </div>
-      </section>
 
-      <section className="intro-section">
-        <div className="section-container intro-grid">
-          <div>
-            <p className="section-tag">ECOSOL Direct</p>
-            <h2>Votre partenaire solaire pour réduire vos factures d’énergie</h2>
-          </div>
-          <p>
-            Nous vous aidons à étudier, dimensionner et installer une solution solaire
-            adaptée à votre logement, bâtiment professionnel ou exploitation agricole.
-            Notre objectif : un projet clair, rentable et durable.
-          </p>
+          <h1>L’énergie solaire pour votre avenir</h1>
+
+          <p>Solutions photovoltaïques performantes et durables.</p>
+
+          <a href="#contact" className="primary-button">
+            Demander un devis
+          </a>
         </div>
       </section>
 
       <section className="image-section desktop-image">
-        <img src="/avantages-financiers.png" alt="Avantages financiers des panneaux solaires ECOSOL Direct" />
+        <img
+          src="/avantages-financiers.png"
+          alt="Avantages financiers"
+        />
       </section>
 
       <section className="image-section mobile-image">
-        <img src="/avantages-financiers-mobile.png" alt="Avantages financiers solaire mobile" />
+        <img
+          src="/avantages-financiers-mobile.png"
+          alt="Avantages financiers mobile"
+        />
       </section>
 
       <section id="services" className="section light-section">
         <div className="section-container">
           <p className="section-tag center">Nos expertises</p>
+
           <h2 className="section-title">Nos Services</h2>
+
           <p className="section-subtitle">
-            Des solutions solaires pensées pour vous accompagner de l’étude du projet jusqu’à la mise en service.
+            Des solutions solaires pensées pour vous accompagner.
           </p>
 
           <div className="services-grid">
             {[
               {
                 title: 'Installation photovoltaïque',
-                text: 'Pose de panneaux solaires pour produire votre propre électricité et réduire vos factures.',
+                text:
+                  'Pose de panneaux solaires pour produire votre propre électricité.',
               },
               {
                 title: 'Kits solaires autonomes',
-                text: 'Solutions solaires adaptées aux besoins d’autonomie énergétique et aux sites isolés.',
+                text:
+                  'Solutions solaires adaptées aux besoins d’autonomie énergétique.',
               },
               {
                 title: 'Maintenance & dépannage',
-                text: 'Contrôle, entretien et intervention pour préserver les performances de votre installation.',
+                text:
+                  'Contrôle, entretien et intervention pour préserver les performances.',
               },
               {
                 title: 'Études de rentabilité',
-                text: 'Analyse de votre consommation, estimation de production et projection des économies possibles.',
+                text:
+                  'Analyse de votre consommation et projection des économies.',
               },
               {
                 title: 'Accompagnement administratif',
-                text: 'Aide dans les démarches liées à votre projet solaire et à sa mise en conformité.',
+                text:
+                  'Aide dans les démarches liées à votre projet solaire.',
               },
             ].map((service, index) => (
               <article key={index} className="service-card">
-                <span className="service-number">0{index + 1}</span>
+                <span className="service-number">
+                  0{index + 1}
+                </span>
+
                 <h3>{service.title}</h3>
+
                 <p>{service.text}</p>
               </article>
             ))}
@@ -135,70 +160,79 @@ export default function Home() {
       </section>
 
       <section className="image-section desktop-image">
-        <img src="/offre_solaire.png" alt="Offre solaire ECOSOL Direct" />
+        <img
+          src="/offre_solaire.png"
+          alt="Offre solaire"
+        />
       </section>
 
       <section className="image-section mobile-image">
-        <img src="/offre_solaire_mobile.png" alt="Offre solaire mobile ECOSOL Direct" />
+        <img
+          src="/offre_solaire_mobile.png"
+          alt="Offre solaire mobile"
+        />
       </section>
 
       <section className="image-section desktop-image">
-        <img src="/installation-sol.png" alt="Installation solaire au sol" />
+        <img
+          src="/installation-sol.png"
+          alt="Installation solaire"
+        />
       </section>
 
       <section className="image-section mobile-image">
-        <img src="/mobile-installation-sol.png" alt="Installation solaire au sol mobile" />
+        <img
+          src="/mobile-installation-sol.png"
+          alt="Installation solaire mobile"
+        />
       </section>
 
-      <section id="avantages" className="section advantages-text-section">
-        <div className="section-container">
-          <p className="section-tag center">Pourquoi passer au solaire ?</p>
-          <h2 className="section-title">Les avantages du photovoltaïque</h2>
-
-          <div className="benefits-grid">
-            <article>
-              <h3>Réduction des factures</h3>
-              <p>Produisez une partie de votre électricité et limitez votre dépendance aux hausses du prix de l’énergie.</p>
-            </article>
-            <article>
-              <h3>Valorisation du bâtiment</h3>
-              <p>Une installation solaire bien dimensionnée peut renforcer l’attractivité de votre maison ou de vos locaux.</p>
-            </article>
-            <article>
-              <h3>Énergie durable</h3>
-              <p>Le solaire permet de produire localement une énergie propre et silencieuse.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="image-section contained desktop-image">
-        <img src="/avantages.png" alt="Avantages des panneaux solaires" />
+      <section
+        className="image-section contained desktop-image"
+        id="avantages"
+      >
+        <img
+          src="/avantages.png"
+          alt="Avantages solaire"
+        />
       </section>
 
       <section className="image-section contained mobile-image">
-        <img src="/avantage-mobile.png" alt="Avantages panneaux solaires mobile" />
+        <img
+          src="/avantage-mobile.png"
+          alt="Avantages solaire mobile"
+        />
       </section>
 
-      <section id="realisations" className="image-section contained desktop-image">
-        <img src="/realisations.png" alt="Réalisations photovoltaïques ECOSOL Direct" />
+      <section
+        className="image-section contained desktop-image"
+        id="realisations"
+      >
+        <img
+          src="/realisations.png"
+          alt="Réalisations"
+        />
       </section>
 
       <section className="image-section contained mobile-image">
-        <img src="/mobile-realisations.png" alt="Réalisations photovoltaïques mobile" />
+        <img
+          src="/mobile-realisations.png"
+          alt="Réalisations mobile"
+        />
       </section>
 
-      <section id="about" className="section light-section about-section">
-        <div className="section-container narrow center-text">
+      <section id="about" className="section light-section">
+        <div className="section-container center-text">
           <p className="section-tag center">À propos</p>
-          <h2>À propos d’ECOSOL Direct</h2>
-          <p>
-            Nous accompagnons les particuliers, agriculteurs et professionnels dans leur
-            transition énergétique grâce à des solutions photovoltaïques modernes.
-          </p>
-          <p>
-            Notre approche repose sur l’écoute, l’étude précise du besoin et la proposition
-            d’une solution claire, compréhensible et adaptée à chaque projet.
+
+          <h2 className="section-title">
+            À propos d’ECOSOL Direct
+          </h2>
+
+          <p className="section-subtitle">
+            Nous accompagnons les particuliers, agriculteurs et
+            professionnels dans leur transition énergétique grâce à
+            des solutions photovoltaïques modernes.
           </p>
         </div>
       </section>
@@ -207,626 +241,457 @@ export default function Home() {
         <div className="contact-container">
           <div className="contact-intro">
             <p className="section-tag">Étude gratuite</p>
+
             <h2>Demandez votre devis</h2>
+
             <p>
-              Laissez vos coordonnées. Nous vous recontactons pour comprendre votre besoin,
-              évaluer votre projet solaire et vous orienter vers la solution adaptée.
+              Laissez vos coordonnées. Nous vous recontactons
+              rapidement.
             </p>
           </div>
 
           <form onSubmit={sendEmail} className="contact-form">
             <div className="form-row">
-              <input type="text" name="nom" placeholder="Nom" required />
-              <input type="text" name="prenom" placeholder="Prénom" required />
+              <input
+                type="text"
+                name="nom"
+                placeholder="Nom"
+                required
+              />
+
+              <input
+                type="text"
+                name="prenom"
+                placeholder="Prénom"
+                required
+              />
             </div>
 
-            <input type="text" name="adresse" placeholder="Adresse complète" required />
+            <input
+              type="text"
+              name="adresse"
+              placeholder="Adresse complète"
+              required
+            />
 
             <div className="form-row">
-              <input type="email" name="email" placeholder="Adresse email" required />
-              <input type="tel" name="telephone" placeholder="Numéro de téléphone" required />
-            </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Adresse email"
+                required
+              />
 
-            <div className="form-row">
-              <select name="type_projet" required defaultValue="">
-                <option value="" disabled>Type de projet</option>
-                <option value="Particulier">Particulier</option>
-                <option value="Professionnel">Professionnel</option>
-                <option value="Agricole">Agricole</option>
-                <option value="Autre">Autre</option>
-              </select>
-              <input type="date" name="date" required />
+              <input
+                type="tel"
+                name="telephone"
+                placeholder="Téléphone"
+                required
+              />
             </div>
 
             <textarea
               name="message"
-              placeholder="Décrivez brièvement votre projet : toiture, terrain, facture d’électricité, puissance souhaitée..."
+              placeholder="Décrivez votre projet..."
               rows="5"
             />
 
-            <label className="consent-label">
-              <input type="checkbox" name="consentement" required />
-              <span>J’accepte d’être recontacté au sujet de ma demande de devis.</span>
-            </label>
+            <button type="submit">
+              Demander un devis gratuit
+            </button>
 
-            <button type="submit">Demander un devis gratuit</button>
-
-            <p className="form-status" aria-live="polite">{status}</p>
+            <p className="form-status">{status}</p>
           </form>
         </div>
       </section>
 
       <footer className="footer">
-        <img src="/logo.png" alt="ECOSOL Direct" className="footer-logo" />
+        <img
+          src="/logo.png"
+          alt="ECOSOL Direct"
+          className="footer-logo"
+        />
 
-        <p>© 2026 ECOSOL Direct — Tous droits réservés</p>
+        <p>
+          © 2026 ECOSOL Direct — Tous droits réservés
+        </p>
 
         <div className="footer-links">
-          <a href="/mentions-legales">Mentions légales</a>
-          <a href="/politique-confidentialite">Politique de confidentialité</a>
+          <a href="/mentions-legales">
+            Mentions légales
+          </a>
+
+          <a href="/politique-confidentialite">
+            Politique de confidentialité
+          </a>
+
           <a href="#contact">Contact</a>
         </div>
-
-        <p className="legal-note">
-          Les informations présentes sur ce site sont fournies à titre indicatif. Chaque projet photovoltaïque
-          nécessite une étude personnalisée selon le bâtiment, l’exposition, la consommation et les règles applicables.
-        </p>
       </footer>
     </main>
   )
 }
 
 const styles = `
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+}
 
-  .site-wrapper {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #111827;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
+.site-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111827;
+  overflow-x: hidden;
+}
 
-  a {
-    color: inherit;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 16px 60px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(12px);
-    z-index: 1000;
-  }
+.logo {
+  height: 78px;
+}
 
-  .logo {
-    height: 78px;
-    display: block;
-  }
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-size: 16px;
-    font-weight: 700;
-  }
+.nav a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 700;
+}
 
-  .nav a {
-    text-decoration: none;
-    color: #1f2937;
-  }
+.nav-cta {
+  background: #00a8e8;
+  color: #ffffff !important;
+  padding: 12px 20px;
+  border-radius: 999px;
+}
 
-  .nav a:hover {
-    color: #00a8e8;
-  }
+.hero {
+  min-height: 760px;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  color: white;
+}
 
-  .nav-cta {
-    background: #00a8e8;
-    color: #ffffff !important;
-    padding: 12px 20px;
-    border-radius: 999px;
-  }
+.hero-card {
+  background: rgba(0,0,0,0.55);
+  padding: 48px;
+  border-radius: 24px;
+  max-width: 720px;
+}
 
-  .hero {
-    position: relative;
-    min-height: 760px;
-    background-image: linear-gradient(90deg, rgba(0,0,0,0.55), rgba(0,0,0,0.12)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
-    color: #fff;
-  }
+.hero-card h1 {
+  font-size: 64px;
+  line-height: 1.1;
+}
 
-  .hero-card {
-    background: rgba(0, 0, 0, 0.56);
-    padding: 48px;
-    max-width: 760px;
-    border-radius: 28px;
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
-  }
+.hero-card p {
+  font-size: 20px;
+  line-height: 1.7;
+}
 
-  .eyebrow,
-  .section-tag {
-    margin: 0 0 14px;
-    color: #00a8e8;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+.eyebrow,
+.section-tag {
+  color: #00a8e8;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-  .hero-card h1 {
-    font-size: clamp(44px, 6vw, 70px);
-    line-height: 1.02;
-    margin: 0 0 22px;
-  }
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
 
-  .hero-card p {
-    font-size: 21px;
-    line-height: 1.65;
-    margin: 0;
-  }
+.primary-button,
+.secondary-button {
+  padding: 16px 26px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 34px;
-  }
+.primary-button {
+  background: #00a8e8;
+  color: white;
+}
 
-  .primary-button,
-  .secondary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 17px 28px;
-    border-radius: 14px;
-    font-size: 17px;
-    font-weight: 800;
-    text-decoration: none;
-  }
+.secondary-button {
+  border: 1px solid white;
+  color: white;
+}
 
-  .primary-button {
-    background: #00a8e8;
-    color: #ffffff;
-    box-shadow: 0 14px 30px rgba(0, 168, 232, 0.3);
-  }
+.hero-mobile {
+  display: none;
+}
 
-  .secondary-button {
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    color: #ffffff;
-  }
+.section {
+  padding: 100px 60px;
+}
 
-  .hero-mobile {
-    display: none;
-    position: relative;
-    min-height: 650px;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.7)), url('/hero-mobile.png');
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    padding: 24px;
-    align-items: flex-end;
-  }
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .section,
-  .intro-section {
-    padding: 96px 60px;
-  }
+.center {
+  text-align: center;
+}
 
-  .section-container {
-    width: min(1180px, 100%);
-    margin: 0 auto;
-  }
+.center-text {
+  text-align: center;
+}
 
-  .narrow {
-    width: min(900px, 100%);
-  }
+.section-title {
+  font-size: 46px;
+}
 
-  .center-text,
-  .center {
-    text-align: center;
-  }
+.section-subtitle {
+  color: #666;
+  line-height: 1.8;
+}
 
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 48px;
-    align-items: center;
-  }
+.light-section {
+  background: #f7f7f7;
+}
 
-  .intro-grid h2,
-  .section-title,
-  .about-section h2,
-  .contact-intro h2 {
-    font-size: clamp(34px, 4vw, 48px);
-    line-height: 1.12;
-    margin: 0 0 18px;
-  }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
 
-  .intro-grid p,
-  .section-subtitle,
-  .about-section p,
-  .contact-intro p {
-    color: #4b5563;
-    font-size: 19px;
-    line-height: 1.8;
-  }
+.service-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 16px 50px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
 
-  .light-section {
-    background: #f5f8fa;
-  }
+.service-number {
+  color: #00a8e8;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
 
-  .section-title {
-    text-align: center;
-  }
+.service-card h3 {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
 
-  .section-subtitle {
-    max-width: 760px;
-    margin: 0 auto 56px;
-    text-align: center;
-  }
+.service-card p {
+  color: #666;
+  line-height: 1.7;
+}
 
+.image-section {
+  margin: 90px 0;
+}
+
+.image-section img {
+  width: 100%;
+  display: block;
+}
+
+.contained {
+  padding: 0 60px;
+}
+
+.contained img {
+  border-radius: 24px;
+}
+
+.contact-section {
+  background: #111;
+  color: white;
+  padding: 100px 60px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  background: #00a8e8;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-status {
+  color: #00d084;
+  font-weight: bold;
+}
+
+.footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer-logo {
+  height: 84px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-image {
+  display: none;
+}
+
+@media (max-width: 1100px) {
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 22px;
-    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .service-card,
-  .benefits-grid article {
-    background: #ffffff;
-    padding: 28px;
-    border-radius: 24px;
-    box-shadow: 0 16px 50px rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(15, 23, 42, 0.06);
-  }
-
-  .service-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 320px;
-    height: 100%;
-  }
-
-  .service-number {
-    display: inline-flex;
-    margin-bottom: 18px;
-    color: #00a8e8;
-    font-size: 14px;
-    font-weight: 900;
-  }
-
-  .service-card h3,
-  .benefits-grid h3 {
-    font-size: 21px;
-    margin: 0 0 14px;
-  }
-
-  .service-card h3 {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-  }
-
-  .service-card p,
-  .benefits-grid p {
-    color: #5b6472;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .image-section {
-    width: 100%;
-    margin: 96px 0;
-  }
-
-  .image-section img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .image-section.contained {
-    padding: 0 60px;
-  }
-
-  .image-section.contained img {
-    border-radius: 26px;
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
-  }
-
-  .advantages-text-section {
-    padding-top: 20px;
-  }
-
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 26px;
-    margin-top: 46px;
-  }
-
-  .about-section {
-    margin-top: 96px;
-  }
-
-  .contact-section {
-    padding: 100px 60px;
-    background: radial-gradient(circle at top left, #10384a, #0b1117 55%, #020617);
-    color: #ffffff;
-  }
-
-  .contact-container {
-    width: min(1180px, 100%);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 52px;
-    align-items: start;
-  }
-
-  .contact-intro p {
-    color: #d1d5db;
-  }
-
-  .contact-form {
-    background: #ffffff;
-    color: #111827;
-    padding: 34px;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    width: 100%;
-    padding: 17px 16px;
-    border-radius: 14px;
-    border: 1px solid #d1d5db;
-    font-size: 16px;
-    font-family: inherit;
-    outline: none;
-    background: #ffffff;
-  }
-
-  .contact-form input:focus,
-  .contact-form select:focus,
-  .contact-form textarea:focus {
-    border-color: #00a8e8;
-    box-shadow: 0 0 0 4px rgba(0, 168, 232, 0.12);
-  }
-
-  .consent-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    color: #4b5563;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .consent-label input {
-    width: auto;
-    margin-top: 4px;
-  }
-
-  .contact-form button {
-    padding: 19px;
-    background: #00a8e8;
-    color: #fff;
-    border: none;
-    border-radius: 16px;
-    font-size: 18px;
-    font-weight: 900;
-    cursor: pointer;
-    box-shadow: 0 14px 30px rgba(0, 168, 232, 0.25);
-  }
-
-  .contact-form button:hover,
-  .primary-button:hover,
-  .nav-cta:hover {
-    filter: brightness(0.95);
-  }
-
-  .form-status {
-    min-height: 24px;
-    margin: 0;
-    color: #008f5a;
-    font-weight: 800;
-    text-align: center;
-  }
-
-  .footer {
-    padding: 54px 24px;
-    text-align: center;
-    background: #000000;
-    color: #ffffff;
-  }
-
-  .footer-logo {
-    height: 84px;
-    margin-bottom: 18px;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin: 22px 0;
-  }
-
-  .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-  }
-
-  .legal-note {
-    max-width: 900px;
-    margin: 0 auto;
-    color: #9ca3af;
-    font-size: 13px;
-    line-height: 1.7;
+@media (max-width: 900px) {
+  .desktop-image {
+    display: none !important;
   }
 
   .mobile-image {
-    display: none;
+    display: block;
   }
 
-  @media (max-width: 1100px) {
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .hero-mobile {
+    display: flex;
+    min-height: 650px;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+      url('/hero-mobile.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    align-items: flex-end;
   }
 
-  @media (max-width: 900px) {
-    .header {
-      padding: 14px 20px;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      position: relative;
-    }
-
-    .logo {
-      height: 70px;
-    }
-
-    .nav {
-      width: 100%;
-      overflow-x: auto;
-      justify-content: flex-start;
-      gap: 16px;
-      padding-bottom: 6px;
-      font-size: 14px;
-      white-space: nowrap;
-    }
-
-    .desktop-image {
-      display: none !important;
-    }
-
-    .mobile-image {
-      display: block;
-    }
-
-    .hero-mobile {
-      display: flex !important;
-    }
-
-    .mobile-card {
-      padding: 28px;
-      border-radius: 22px;
-      width: 100%;
-    }
-
-    .hero-card h1 {
-      font-size: 38px;
-    }
-
-    .hero-card p {
-      font-size: 17px;
-    }
-
-    .section,
-    .intro-section,
-    .contact-section {
-      padding: 72px 20px;
-    }
-
-    .intro-grid,
-    .contact-container,
-    .benefits-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .image-section {
-      margin: 72px 0;
-    }
-
-    .image-section.contained {
-      padding: 0 20px;
-    }
-
-    .form-row {
-      grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-      padding: 24px;
-      border-radius: 22px;
-    }
+  .mobile-card {
+    width: 100%;
   }
 
-  @media (max-width: 650px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .service-card {
-      min-height: auto;
-    }
-
-    .service-card h3 {
-      min-height: auto;
-    }
+  .header {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  @media (max-width: 520px) {
-    .nav-cta {
-      padding: 10px 16px;
-    }
-
-    .section-title,
-    .intro-grid h2,
-    .about-section h2,
-    .contact-intro h2 {
-      font-size: 32px;
-    }
-
-    .service-card,
-    .benefits-grid article {
-      padding: 26px;
-    }
-
-    .footer-links {
-      flex-direction: column;
-      align-items: center;
-    }
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
+  .section,
+  .contact-section {
+    padding: 70px 20px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contained {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+
+  .service-card h3 {
+    min-height: auto;
+  }
+
+  .hero-card h1 {
+    font-size: 42px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+}
 `
 ```
