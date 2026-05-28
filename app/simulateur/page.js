@@ -14,7 +14,17 @@ const appliances = [
   { id: 'four', name: 'Four électrique', power: 2000, hours: 1 },
   { id: 'microondes', name: 'Micro-ondes', power: 1000, hours: 0.5 },
   { id: 'chauffeeau', name: 'Chauffe-eau électrique', power: 2000, hours: 2 },
+
+  { id: 'ventilation', name: 'Ventilation centralisée', power: 400, hours: 10 },
+
+  { id: 'radiateurs', name: 'Radiateurs électriques', power: 3000, hours: 6 },
+
+  { id: 'vehicule', name: 'Recharge véhicule électrique', power: 3500, hours: 4 },
+
+  { id: 'pellet', name: 'Poêle à pellets', power: 500, hours: 8 },
+
   { id: 'climatisation', name: 'Climatisation', power: 1500, hours: 5 },
+
   { id: 'pompe', name: 'Pompe à eau', power: 1500, hours: 3 },
 ]
 
