@@ -18,7 +18,7 @@ export default function PolitiqueConfidentialite() {
       <p>Vous pouvez demander l’accès, la modification ou la suppression de vos données.</p>
 
       <h2>Contact</h2>
-      <p>tmrrclothing@gmail.com</p>
+      <p>contact@ecosoldirect.fr</p>
     </main>
   )
 }
