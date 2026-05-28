@@ -1,6 +1,3 @@
-
-Dans ton `app/page.js`, remplace simplement :
-
 ```jsx
 <a href="#simulateur">Simulateur</a>
 ```
