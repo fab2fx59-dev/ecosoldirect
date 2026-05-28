@@ -1,14 +1,19 @@
-import './globals.css'
+<html lang="fr">
+  <body>
+    {children}
 
-export const metadata = {
-  title: 'ECOSOL Direct',
-  description: 'Entreprise spécialisée en énergie solaire',
-}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H593VXW1K1"></script>
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="fr">
-      <body>{children}</body>
-    </html>
-  )
-}
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-H593VXW1K1');
+        `,
+      }}
+    />
+  </body>
+</html>
