@@ -399,17 +399,21 @@ export default function Home() {
         }
 
         .impact-home-banner a {
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           width: 100%;
           overflow: hidden;
+          background: #001f2d;
         }
 
         .impact-home-banner img {
-          width: 100%;
-          height: min(350px, 26vw);
-          min-height: 220px;
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          max-height: 350px;
           display: block;
-          object-fit: cover;
+          object-fit: contain;
           object-position: center;
         }
 
