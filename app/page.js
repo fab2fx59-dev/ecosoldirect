@@ -1009,6 +1009,7 @@ export default function Home() {
           <a href="/simulateur">Simulateur</a>
           <a href="#avantages">Avantages</a>
           <a href="#realisations">Réalisations</a>
+          <a href="/ecosol-impact">Impact</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -1431,6 +1432,7 @@ export default function Home() {
         <div className="footer-links">
           <a href="/mentions-legales">Mentions légales</a>
           <a href="/politique-confidentialite">Politique de confidentialité</a>
+          <a href="/ecosol-impact">ECOSOL Impact</a>
           <a href="#contact">Contact</a>
         </div>
       </footer>
