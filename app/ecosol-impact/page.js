@@ -233,18 +233,24 @@ export default function EcosolImpact() {
           line-height: 1.55;
         }
 
+        .impact-story-section {
+          padding: 100px 0;
+        }
+
+        .impact-story-inner {
+          padding: 0 60px;
+        }
+
         .impact-story-image {
-          width: calc(100% + 120px);
-          margin: -10px -60px 60px;
+          width: 100%;
+          margin: 0 0 60px;
           overflow: hidden;
-          border-radius: 0;
-          box-shadow: none;
         }
 
         .impact-story-image img {
           width: 100%;
+          height: clamp(320px, 36vw, 520px);
           display: block;
-          min-height: 360px;
           object-fit: cover;
         }
 
@@ -303,13 +309,16 @@ export default function EcosolImpact() {
 
           section { padding: 70px 20px; }
 
-          .impact-story-image {
-            width: calc(100% + 40px);
-            margin: -10px -20px 44px;
+          .impact-story-section {
+            padding: 70px 0;
+          }
+
+          .impact-story-inner {
+            padding: 0 20px;
           }
 
           .impact-story-image img {
-            min-height: 280px;
+            height: 300px;
           }
 
           .impact-hero,
@@ -430,17 +439,22 @@ export default function EcosolImpact() {
         </div>
       </section>
 
-      <section>
-        <h2 className="title">Pourquoi cela change la perception du projet</h2>
+      <section className="impact-story-section">
+        <div className="impact-story-inner">
+          <h2 className="title">Pourquoi cela change la perception du projet</h2>
+        </div>
+
         <div className="impact-story-image">
           <img src="/ecosol-impact-projet-large.png" alt="Le client devient acteur d'un projet plus large que sa seule facture d'électricité" />
         </div>
 
-        <div className="proof-grid">
-          <div><strong>Une histoire</strong><span>Le projet solaire devient plus humain et plus mémorable.</span></div>
-          <div><strong>Des valeurs</strong><span>Le client associe son achat à une démarche responsable.</span></div>
-          <div><strong>Un impact concret</strong><span>Les actions sont simples à comprendre et à expliquer.</span></div>
-          <div><strong>Une preuve</strong><span>Le client reçoit une trace de l'action financée.</span></div>
+        <div className="impact-story-inner">
+          <div className="proof-grid">
+            <div><strong>Une histoire</strong><span>Le projet solaire devient plus humain et plus mémorable.</span></div>
+            <div><strong>Des valeurs</strong><span>Le client associe son achat à une démarche responsable.</span></div>
+            <div><strong>Un impact concret</strong><span>Les actions sont simples à comprendre et à expliquer.</span></div>
+            <div><strong>Une preuve</strong><span>Le client reçoit une trace de l'action financée.</span></div>
+          </div>
         </div>
       </section>
 
