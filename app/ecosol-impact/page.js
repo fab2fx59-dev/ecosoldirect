@@ -344,7 +344,10 @@ export default function EcosolImpact() {
           }
 
           .impact-story-image img {
-            height: 350px;
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: contain;
           }
 
           .impact-hero,
