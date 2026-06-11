@@ -164,7 +164,7 @@ export default function EcosolImpact() {
         .impact-partner-logo {
           width: auto;
           max-width: 210px;
-          height: 54px;
+          max-height: 64px;
           object-fit: contain;
           display: block;
         }
@@ -407,7 +407,7 @@ export default function EcosolImpact() {
             <div className="impact-partner">
               <img
                 className="impact-partner-logo"
-                src="https://www.reforestaction.com/themes/custom/reforestaction/images/logo-reforestaction.svg"
+                src="/logo-reforest-action.png"
                 alt="Reforest'Action"
               />
               <span>Programme avec Reforest'Action</span>
@@ -424,7 +424,7 @@ export default function EcosolImpact() {
             <div className="impact-partner">
               <img
                 className="impact-partner-logo"
-                src="https://noplasticinmysea.org/wp-content/uploads/2023/06/logo-noplastic.png"
+                src="/logo-no-plastic-in-my-sea.jpg"
                 alt="No Plastic In My Sea"
               />
               <span>Programme avec No Plastic In My Sea</span>
