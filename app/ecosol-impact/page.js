@@ -124,7 +124,7 @@ export default function EcosolImpact() {
 
         .impact-actions {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 24px;
         }
 
@@ -159,6 +159,32 @@ export default function EcosolImpact() {
           margin: 0;
           color: #555;
           line-height: 1.7;
+        }
+
+        .impact-partner-logo {
+          width: auto;
+          max-width: 210px;
+          height: 54px;
+          object-fit: contain;
+          display: block;
+        }
+
+        .impact-partner {
+          min-height: 78px;
+          margin: 0 0 18px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .impact-partner span {
+          color: #092753;
+          font-size: 14px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
         }
 
         .impact-method {
@@ -205,7 +231,7 @@ export default function EcosolImpact() {
 
         .proof-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 1px;
           overflow: hidden;
           border: 1px solid #cfe4c9;
@@ -249,7 +275,7 @@ export default function EcosolImpact() {
 
         .impact-story-image img {
           width: 100%;
-          height: clamp(180px, 18vw, 240px);
+          height: 350px;
           display: block;
           object-fit: cover;
         }
@@ -318,7 +344,7 @@ export default function EcosolImpact() {
           }
 
           .impact-story-image img {
-            height: 190px;
+            height: 350px;
           }
 
           .impact-hero,
@@ -364,43 +390,50 @@ export default function EcosolImpact() {
         <div className="impact-panel">
           <strong>Le principe</strong>
           <span>
-            Chaque installation solaire au sol finance un pack d'actions positives,
-            vérifiables et expliquées au client après la mise en service.
+            Chaque installation solaire au sol finance deux actions positives :
+            planter un arbre et contribuer au retrait de déchets plastiques.
           </span>
         </div>
       </section>
 
       <section>
-        <h2 className="title">Chaque installation solaire finance trois actions positives</h2>
+        <h2 className="title">Chaque installation solaire finance 2 actions positives</h2>
         <p className="subtitle">
           Une promesse simple à comprendre, concrète pour le client et facile à raconter.
         </p>
 
         <div className="impact-actions">
           <article className="impact-card">
+            <div className="impact-partner">
+              <img
+                className="impact-partner-logo"
+                src="https://www.reforestaction.com/themes/custom/reforestaction/images/logo-reforestaction.svg"
+                alt="Reforest'Action"
+              />
+              <span>Programme avec Reforest'Action</span>
+            </div>
             <div className="impact-icon">1</div>
             <h3>1 arbre planté</h3>
             <p>
-              Une contribution symbolique et visible pour associer chaque projet solaire
-              à une action de régénération.
+              Avec Reforest'Action, votre projet solaire contribue à une action
+              de reforestation concrète, lisible et porteuse de sens.
             </p>
           </article>
 
           <article className="impact-card">
-            <div className="impact-icon">10</div>
-            <h3>10 kg de plastique retirés</h3>
+            <div className="impact-partner">
+              <img
+                className="impact-partner-logo"
+                src="https://noplasticinmysea.org/wp-content/uploads/2023/06/logo-noplastic.png"
+                alt="No Plastic In My Sea"
+              />
+              <span>Programme avec No Plastic In My Sea</span>
+            </div>
+            <div className="impact-icon">100</div>
+            <h3>100 kg de plastique retirés</h3>
             <p>
-              Une action environnementale concrète pour contribuer au retrait de déchets
-              plastiques de l'environnement.
-            </p>
-          </article>
-
-          <article className="impact-card">
-            <div className="impact-icon">OK</div>
-            <h3>Une preuve transmise</h3>
-            <p>
-              Le client reçoit un justificatif ou un récapitulatif de l'action financée,
-              afin que l'impact reste clair et vérifiable.
+              Avec No Plastic In My Sea, votre installation participe à une action
+              environnementale concrète contre les déchets plastiques.
             </p>
           </article>
         </div>
@@ -431,8 +464,8 @@ export default function EcosolImpact() {
                 <span>ECOSOL Direct déclenche la contribution associée à l'installation.</span>
               </div>
               <div className="impact-step">
-                <strong>3. Preuve partagée</strong>
-                <span>Le client reçoit un récapitulatif de son impact et peut le conserver.</span>
+                <strong>3. Actions déclenchées</strong>
+                <span>Les deux contributions sont associées au projet solaire du client.</span>
               </div>
             </div>
           </div>
@@ -453,7 +486,6 @@ export default function EcosolImpact() {
             <div><strong>Une histoire</strong><span>Le projet solaire devient plus humain et plus mémorable.</span></div>
             <div><strong>Des valeurs</strong><span>Le client associe son achat à une démarche responsable.</span></div>
             <div><strong>Un impact concret</strong><span>Les actions sont simples à comprendre et à expliquer.</span></div>
-            <div><strong>Une preuve</strong><span>Le client reçoit une trace de l'action financée.</span></div>
           </div>
         </div>
       </section>
