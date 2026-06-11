@@ -393,6 +393,26 @@ export default function Home() {
           background: #fff;
         }
 
+        .impact-home-banner {
+          padding: 0;
+          background: #fff;
+        }
+
+        .impact-home-banner a {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .impact-home-banner img {
+          width: 100%;
+          height: min(350px, 26vw);
+          min-height: 220px;
+          display: block;
+          object-fit: cover;
+          object-position: center;
+        }
+
         .gallery-scroll {
           display: grid;
           grid-auto-flow: column;
@@ -1099,6 +1119,15 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="impact-home-banner" aria-label="ECOSOL Impact">
+        <a href="/ecosol-impact">
+          <img
+            src="/banniere-impact-ecosol.png"
+            alt="ECOSOL Impact - votre installation solaire finance 1 arbre planté et 100 kg de plastique retirés"
+          />
+        </a>
       </section>
 
       <section id="realisations" className="realisations">
