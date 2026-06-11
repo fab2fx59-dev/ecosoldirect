@@ -80,7 +80,7 @@ export default function EcosolImpact() {
           grid-template-columns: 1fr 0.85fr;
           gap: 46px;
           align-items: center;
-          background-image: linear-gradient(rgba(3,21,43,0.72), rgba(3,21,43,0.64)), url('/panneaux-sol-finis.png');
+          background-image: linear-gradient(rgba(3,21,43,0.58), rgba(3,21,43,0.5)), url('/ecosol-impact-hero.png');
           background-size: cover;
           background-position: center;
           color: #fff;
