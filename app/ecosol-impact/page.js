@@ -249,7 +249,7 @@ export default function EcosolImpact() {
 
         .impact-story-image img {
           width: 100%;
-          height: clamp(320px, 36vw, 520px);
+          height: clamp(180px, 18vw, 240px);
           display: block;
           object-fit: cover;
         }
@@ -318,7 +318,7 @@ export default function EcosolImpact() {
           }
 
           .impact-story-image img {
-            height: 300px;
+            height: 190px;
           }
 
           .impact-hero,
