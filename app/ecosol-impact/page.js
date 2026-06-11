@@ -233,6 +233,19 @@ export default function EcosolImpact() {
           line-height: 1.55;
         }
 
+        .impact-story-image {
+          max-width: 1180px;
+          margin: 0 auto 50px;
+          overflow: hidden;
+          border-radius: 22px;
+          box-shadow: 0 12px 35px rgba(0,0,0,0.13);
+        }
+
+        .impact-story-image img {
+          width: 100%;
+          display: block;
+        }
+
         .impact-cta {
           background: #092753;
           color: #fff;
@@ -408,9 +421,9 @@ export default function EcosolImpact() {
 
       <section>
         <h2 className="title">Pourquoi cela change la perception du projet</h2>
-        <p className="subtitle">
-          Le client devient acteur d'un projet plus large que sa seule facture d'électricité.
-        </p>
+        <div className="impact-story-image">
+          <img src="/ecosol-impact-projet-large.png" alt="Le client devient acteur d'un projet plus large que sa seule facture d'électricité" />
+        </div>
 
         <div className="proof-grid">
           <div><strong>Une histoire</strong><span>Le projet solaire devient plus humain et plus mémorable.</span></div>
