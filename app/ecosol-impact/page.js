@@ -234,16 +234,18 @@ export default function EcosolImpact() {
         }
 
         .impact-story-image {
-          max-width: 1180px;
-          margin: 0 auto 50px;
+          width: calc(100% + 120px);
+          margin: -10px -60px 60px;
           overflow: hidden;
-          border-radius: 22px;
-          box-shadow: 0 12px 35px rgba(0,0,0,0.13);
+          border-radius: 0;
+          box-shadow: none;
         }
 
         .impact-story-image img {
           width: 100%;
           display: block;
+          min-height: 360px;
+          object-fit: cover;
         }
 
         .impact-cta {
@@ -300,6 +302,15 @@ export default function EcosolImpact() {
           }
 
           section { padding: 70px 20px; }
+
+          .impact-story-image {
+            width: calc(100% + 40px);
+            margin: -10px -20px 44px;
+          }
+
+          .impact-story-image img {
+            min-height: 280px;
+          }
 
           .impact-hero,
           .impact-method,
